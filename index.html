@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>PeakFit Fitness | Your Ultimate Fitness Destination</title>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <p class="logo"> Peak<span>Fit</span></p>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#footer">Follow Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <button id="theme-switch" class="dark-light"><div>Dark</div><div>Light</div></button>
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <h1>UNLEASH YOUR<br><span>POTENTIAL.</span></h1>
+            <p>Premium fitness coaching tailored to your lifestyle. <br> claim your spot today.</p>
+            <a href="#contact" class="btn">Get Started Now</a>
+            
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="service" class="service">
+            <div class="container">
+                <p class="service-description">Discover our range of fitness services designed to help you achieve your
+                    goals.</p>
+                <h2>Our Services</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Personal Training</h3>
+                        <p>One-on-one sessions with our certified trainers.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Group Classes</h3>
+                        <p>Join our dynamic group fitness classes.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Nutrition Planning</h3>
+                        <p>Customized meal plans to support your fitness journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Clients <span>Say</span></h2>
+                <div>
+                    <div class="person">
+                        <img src="images/person1.jpg">
+                        <p>"I've never felt better in my life. The trainers at PeakFit are amazing!"</p>
+                    </div>
+                    <div class="person">
+                        <img src="images/person2.jpg">
+                        <p>"The group classes are so much fun and really effective. Highly recommend!"</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                
+                <h2>Contact Us</h2>
+                <p>Schedule your fitness session with our expert trainers.</p>
+                <form id="contact-form">
+                    <label>Name</label>
+                    <input type="text" name="user_name" id="name" required>
+
+                    <label>Email</label>
+                    <input type="email" name="user_email" id="email" required>
+
+                    <label>Message</label>
+                    <textarea name="message" id="message" required></textarea>
+                    <input type="submit" value="Send">
+                </form>
+
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+                <div>
+                    <h3>PeakFit Fitness</h3>
+                    <p>123 Fitness St, Wellness City, Fitland</p>
+                    <p>Email: info@peakfit.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Post Code: 12345</p>
+                </div>
+                <div class="socials">
+                    <h3>Follow Us</h3>
+                    <div>
+                        <p><a href="#">Facebook</a></p>
+                        <p><a href="#">Twitter</a></p>
+                        <p><a href="#">Instagram</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PeakFit Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
