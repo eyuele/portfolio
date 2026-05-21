@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NordicFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html">Nordic<span>Flow</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+            <button id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="services.html" class="mobile-link">Services</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Contacts</a></li>
+        </ul>
+    </div>
+    <div id="mobile-overlay" class="mobile-overlay"></div>
+
+    <header id="index"  class="hero">
+        <div class="container">
+            <h3>Fast, Reliable Home Services in Washington</h3>
+            <p>24/7 emergency repairs - call now: <a href="tel:+1123456789">+1123-456-789</a></p>
+            <div class="btn-group">
+                <a href="#content" class="btn">Explore More</a>
+                <a href="contact.html" class="btn">Contact-Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="content">
+        <section class="service">
+            <p class="description">Family-owned, licensed, and insured. We fix what others can't.</p>
+            <h3 class="title">Services</h3>
+            <div class="service-cards">
+                <div class="card-img">
+                    <div class="card-txt">
+                        <h3>Gas Leak Detection</h3>
+                        <p>Fast, reliable gas leak detection and repair. We locate and fix leaks quickly to keep your
+                            home safe.</p>
+                    </div>
+                </div>
+                <div class="card-img">
+                    <div class="card-txt">
+                        <h3>Plumbing Repair</h3>
+                        <p>From burst pipes to clogged drains, our plumbers solve any issue with same‑day service.</p>
+                    </div>
+                </div>
+                <div class="card-img">
+                    <div class="card-txt">
+                        <h3>HVAC Maintenance</h3>
+                        <p>Keep your heating and cooling systems running efficiently all year round.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="services.html" class="btn">View All Services</a>
+        </section>
+    </main>
+
+
+
+    <footer class="footer">
+        <section class="contact">
+            <div class="container">
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Phone: <a href="tel:+1123456789">+1123-456-789</a></p>
+                    <p>Email: <a href="mailto:info@nordicflow.com">info@nordicflow.com</a></p>
+                    <p>Address: 123 Main St, Seattle, WA 98101</p>
+                    <p>Postal Code: 98101</p>
+                </div>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <div>
+                        <a href="https://www.facebook.com/nordicflow" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f" aria-label="Visit our Facebook page"></i>
+                        </a>
+                        <a href="https://www.twitter.com/nordicflow" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter" aria-label="Visit our Twitter page"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nordicflow" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-label="Visit our Instagram page"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="copy">
+            <div class="container">
+                <p>&copy; 2024 NordicFlow. All rights reserved.</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
