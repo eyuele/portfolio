@@ -12,54 +12,97 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <nav class="nav">
         <div class="container">
-            <p>Nordic<span>Flow</span></p>
+            <a href="index.html">Nordic<span>Flow</span></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contacts</a></li>
-
             </ul>
+            <button id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-        <main id="content" class="content">
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="services.html" class="mobile-link">Services</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Contacts</a></li>
+        </ul>
+    </div>
+    <div id="mobile-overlay" class="mobile-overlay"></div>
+
+    <main class="content">
         <section class="service">
-            <p class="description">Family-owned, licensed, and insured. We fix what others can't.</p>
-            <h3 class="title">Services</h3>
+            <h3 class="title">Our Services</h3>
+            <p class="description">Full‑service home repair and maintenance – licensed, insured, and ready to help.</p>
+
             <div class="service-cards">
                 <div class="card-img">
                     <div class="card-txt">
                         <h3>Gas Leak Detection</h3>
-                        <p>Fast, reliable gas leak detection and repair. We locate and fix leaks quickly to keep your
-                            home safe.</p>
+                        <p>Electronic leak detection, pressure testing, and certified gas line repair. Same‑day service.
+                        </p>
+                        <span class="price">From $120</span>
                     </div>
                 </div>
                 <div class="card-img">
                     <div class="card-txt">
                         <h3>Plumbing Repair</h3>
-                        <p>From burst pipes to clogged drains, our plumbers solve any issue with same‑day service.</p>
+                        <p>Burst pipes, water heaters, clogged drains, faucets – fast, reliable, and guaranteed.</p>
+                        <span class="price">From $80</span>
                     </div>
                 </div>
                 <div class="card-img">
                     <div class="card-txt">
                         <h3>HVAC Maintenance</h3>
-                        <p>Keep your heating and cooling systems running efficiently all year round.</p>
+                        <p>Pre‑season tune‑up, filter replacement, duct cleaning, and efficiency check.</p>
+                        <span class="price">From $100</span>
+                    </div>
+                </div>
+                <div class="card-img">
+                    <div class="card-txt">
+                        <h3>Electrical Repair</h3>
+                        <p>Breaker trips, outlet repair, lighting installation – licensed electrician on call.</p>
+                        <span class="price">From $90</span>
+                    </div>
+                </div>
+                <div class="card-img">
+                    <div class="card-txt">
+                        <h3>Drain Cleaning</h3>
+                        <p>Hydro‑jetting, auger, camera inspection – no mess, no guesswork.</p>
+                        <span class="price">From $110</span>
+                    </div>
+                </div>
+                <div class="card-img">
+                    <div class="card-txt">
+                        <h3>Appliance Repair</h3>
+                        <p>Ovens, refrigerators, dishwashers, dryers – diagnostic and repair. Most fixes done same day.
+                        </p>
+                        <span class="price">From $95</span>
                     </div>
                 </div>
             </div>
-            <a href="services.html" class="btn">View All Services</a>
+            <a href="contact.html" class="btn">Order-Now</a>
         </section>
     </main>
-    
+
     <footer class="footer">
         <section class="contact">
             <div class="container">
@@ -89,7 +132,7 @@
         </section>
         <section class="copy">
             <div class="container">
-                <p>&copy; 2024 NordicFlow. All rights reserved.</p>
+                <p>&copy; 2026 NordicFlow. All rights reserved.</p>
             </div>
         </section>
     </footer>

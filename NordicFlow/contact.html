@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NordicFlow</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Add this script once in the <head> of your HTML file -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -48,32 +49,58 @@
     <section id="contact" class="form">
         <div class="container">
             <h3>Request a Service</h3>
-            <form action="">
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div>
-                    <label for="service">Service</label>
-                    <select id="service" name="service" required>
-                        <option value="">Select a service</option>
-                        <option value="gas-leak-detection">Gas Leak Detection</option>
-                        <option value="plumbing-repair">Plumbing Repair</option>
-                        <option value="hvac-maintenance">HVAC Maintenance</option>
-                    </select>
+            <form id="contact-form">
+                <div class="form-align">
+                    <div>
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" data-date="" data-date-format="DD MMMM YYYY" name="date"
+                                required>
+                        </div>
+                        <div>
+                            <label for="service">Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="gas-leak-detection">Gas Leak Detection</option>
+                                <option value="plumbing-repair">Plumbing Repair</option>
+                                <option value="hvac-maintenance">HVAC Maintenance</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="b-time">Preferred Time</label>
+                            <select id="b-time" name="preferred_time" required="">
+                                <option value="" disabled="" selected="">Choose a time</option>
+                                <option>9:00 AM</option>
+                                <option>10:00 AM</option>
+                                <option>11:00 AM</option>
+                                <option>1:00 PM</option>
+                                <option>2:00 PM</option>
+                                <option>3:00 PM</option>
+                                <option>4:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <label for="message">Additional Details</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
+                    <textarea id="message" name="message" rows="4" placeholder="Any Additional details..."
+                        style="height: 117px;"></textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
                 <button type="submit" class="btn">Submit Request</button>
             </form>
         </div>
@@ -108,7 +135,7 @@
         </section>
         <section class="copy">
             <div class="container">
-                <p>&copy; 2024 NordicFlow. All rights reserved.</p>
+                <p>&copy; 2026 NordicFlow. All rights reserved.</p>
             </div>
         </section>
     </footer>

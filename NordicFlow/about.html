@@ -12,26 +12,82 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <nav class="nav">
         <div class="container">
-            <p>Nordic<span>Flow</span></p>
+            <a href="index.html">Nordic<span>Flow</span></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contacts</a></li>
-
             </ul>
+            <button id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    
+    <div id="mobile-menu" class="mobile-menu">
+        <ul>
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="services.html" class="mobile-link">Services</a></li>
+            <li><a href="about.html" class="mobile-link">About</a></li>
+            <li><a href="contact.html" class="mobile-link">Contacts</a></li>
+        </ul>
+    </div>
+    <div id="mobile-overlay" class="mobile-overlay"></div>
+
+
+
+
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>About NordicFlow</h2>
+                    <p>Founded in Seattle in 2018, NordicFlow started with a simple mission: provide honest, fast, and
+                        reliable home services that homeowners can trust.</p>
+                    <p>We are a family‑owned, licensed, and insured company specializing in gas leak detection, plumbing
+                        repair, and HVAC maintenance. Our technicians undergo continuous training to stay ahead of
+                        industry standards.</p>
+                    <h3>Our Values</h3>
+                    <ul>
+                        <li><strong>Transparency</strong> – Upfront pricing, no hidden fees.</li>
+                        <li><strong>Punctuality</strong> – We respect your time and arrive as scheduled.</li>
+                        <li><strong>Safety First</strong> – Every job follows strict safety protocols.</li>
+                        <li><strong>100% Satisfaction</strong> – We don't rest until you're happy.</li>
+                    </ul>
+                    <p>Over 500+ homeowners in the greater Seattle area have chosen NordicFlow. Let us earn your trust
+                        too.</p>
+                    <a href="contact.html" class="btn">Request a free estimate</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://grahamandsonsplumbing.com.au/wp-content/uploads/2024/09/Graham-Sons-Plumbing-Team.png?w=10&q=80" alt="NordicFlow certified technicians">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
 
     <footer class="footer">
         <section class="contact">
@@ -62,7 +118,7 @@
         </section>
         <section class="copy">
             <div class="container">
-                <p>&copy; 2024 NordicFlow. All rights reserved.</p>
+                <p>&copy; 2026 NordicFlow. All rights reserved.</p>
             </div>
         </section>
     </footer>
