@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="FormValidator.css">
+    <script src="FormValidator.js" defer></script>
+    <title>Form Validator</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <h1>Eyuel-Portfolio</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../order.html">Order</a></li>
+        </ul>
+
+    </nav>
+    <main>
+        <div class="container">
+            <div class="card">
+                <form>
+                    <label for="namein">Name</label>
+                    <input type="text" id="namein">
+                    <span class="error" id="nameError">
+                        <ul>
+                            <li>Name can not be empty .Please enter a your Name.</li>
+                        </ul>
+                    </span>
+                    <label for="emailin">Email</label>
+                    <input type="email" id="emailin">
+                    <span class="error" id="emailError">
+                        <ul>
+                            <li>please enter a valid email</li>
+                            <li>Email can not be empty .Please enter a valid Email.</li>
+                        </ul>
+                    </span>
+                    <label for="passin">Password</label>
+                    <input type="password" id="passin">
+                    <span class="error" id="passError">
+                        <ul>
+                            <li>Password can not be less than 8 characters or more than 24 characters.Please enter a
+                                valid
+                                password.</li>
+                            <li>Password can not be empty .Please enter a valid password.</li>
+                        </ul>
+                    </span>
+                    <input type="button" id="submit" value="Submit">
+                    <span class="error" id="result">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+:root {
+    --mainColor: rgb(253, 221, 181);
+    --col001: rgb(17, 8, 0);
+    --col001-T: rgba(7, 3, 0, 0.96);
+    --col002: rgb(255, 140, 0);
+    --col003: rgb(255, 237, 217);
+    --sh001: rgba(170, 129, 78, 0.593);
+    --transitions: 500ms ease-in-out;
+    --col004: rgb(89, 46, 10);
+    --col005: rgb(253, 247, 242);
+    --col006: rgb(231, 226, 221);
+    --col007: rgb(135, 132, 129);
+    --col008: rgb(244, 0, 0);
+    --col009: rgb(0, 171, 31);
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 1fr auto;
+
+}
+
+.container .card {
+    grid-column: 2;
+    grid-row: 2;
+    background: var(--col005);
+    border-radius: 1rem;
+    min-height: 10em;
+    width: 44em;
+}
+
+.container .card form {
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 2em;
+    gap: 0.5em;
+}
+
+.container .card form span {
+    display: none;
+    min-height: 1em;
+    background: var(--col005);
+    border-radius: 1em;
+    color: var(--col007);
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 0.5em;
+    padding-left: 2.5em;
+
+}
+
+.container .card form span ul {
+    list-style: disc;
+}
+
+.container .card form input {
+    background: var(--col006);
+}
+
+.container .card form input[type="text"] {
+    border-radius: 1rem;
+    padding: 1em;
+    border: none;
+    outline: none;
+}
+
+.container .card form input[type="email"] {
+    border-radius: 1rem;
+    padding: 1em;
+    border: none;
+    outline: none;
+}
+
+.container .card form input[type="password"] {
+    border-radius: 1rem;
+    padding: 1em;
+    border: none;
+    outline: none;
+}
+
+.container .card form input[type="button"] {
+    border-radius: 1rem;
+    padding: 1em;
+    width: 16em;
+    border: none;
+    outline: none;
+    margin-top: 1em;
+}

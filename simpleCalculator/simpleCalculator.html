@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="calcstyle.css">
+    <script src="calcscript.js" defer></script>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <h1>Eyuel-Portfolio</h1>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../order.html">Order</a></li>
+        </ul>
+
+    </nav>
+    <main class="calcmain">
+        <div class="card">
+            <h1>Simple Calculator</h1>
+            <div class="form">
+                <input type="display" id="calcin" readonly>
+                <div>
+                    <button onclick=calc()>=</button>
+                </div>
+            </div>
+            <div class="holder">
+
+                <div class="nums">
+                    <div>
+                        <button onclick=appendToDisplay('7') class="numBtn">7</button>
+                        <button onclick=appendToDisplay('8') class="numBtn">8</button>
+                        <button onclick=appendToDisplay('9') class="numBtn">9</button>
+                    </div>
+                    <div>
+                        <button onclick=appendToDisplay('4') class="numBtn">4</button>
+                        <button onclick=appendToDisplay('5') class="numBtn">5</button>
+                        <button onclick=appendToDisplay('6') class="numBtn">6</button>
+                    </div>
+                    <div>
+                        <button onclick=appendToDisplay('1') class="numBtn">1</button>
+                        <button onclick=appendToDisplay('2') class="numBtn">2</button>
+                        <button onclick=appendToDisplay('3') class="numBtn">3</button>
+                    </div>
+                    <div>
+                        <button onclick=clearDisplay() class="fnbutton">C</button>
+                        <button onclick=appendToDisplay('0') class="numBtn">0</button>
+                        <button onclick=appendToDisplay('.') class="fnbutton">.</button>
+                    </div>
+                </div>
+                <div class="sgn">
+                    <button onclick=appendToDisplay('+') type="button">+</button>
+                    <button onclick=appendToDisplay('-') type="button">-</button>
+                    <button onclick=appendToDisplay('*') type="button">*</button>
+                    <button onclick=appendToDisplay('/') type="button">/</button>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
