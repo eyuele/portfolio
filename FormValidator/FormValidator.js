@@ -28,7 +28,7 @@ const validateEmail = () => {
 
     if (email.value.trim() !== "") {
 
-        if (email.value.includes(".") == true && email.value.includes("@")) {
+        if (email.value.includes(".") && email.value.includes("@")) {
             emailError.style.display = "none";
             return email.value.trim();
         }

@@ -48,14 +48,14 @@
     border-radius: 1em;
     color: var(--col007);
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 0.9rem;
     padding: 0.5em;
     padding-left: 2.5em;
 
 }
 
 .container .card form span ul {
-    list-style: disc;
+    list-style: none;
 }
 
 .container .card form input {
