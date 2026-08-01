@@ -4,7 +4,7 @@ const authorName = document.getElementById("authorName");
 
 const genQuote = document.getElementById("generateBtn");
 const tweetQuote = document.getElementById("tweetBtn");
-
+getQuote();
 async function getQuote() {
     try {
         const response = await fetch('https://api.quotable.io/random');
