@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
-    <script src="todoScript.js" defer></script>
-    <title>ToDo List</title>
+    <script src="script.js" defer></script>
+    <title>Quote Generator</title>
 </head>
 
 <body>
@@ -23,11 +23,14 @@
     <main>
         <div class="container">
             <div class="card">
+                <h1>Quote Generator</h1>
+                <blockquote id="quoteText">Loading...</blockquote>
+                <span id="authorName">Loading...</span>
                 <div>
-                    <input type="text" id="taskInput" placeholder="New task">
-                    <button id="addBtn" type="button">Add</button>
+                    <button id="generateBtn">New Quote</button>
+                    <button id="tweetBtn">Tweet</button>
+
                 </div>
-                <ul class="tasklist" id="taskList"></ul>
             </div>
         </div>
     </main>
