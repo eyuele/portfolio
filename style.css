@@ -4,13 +4,11 @@
 
 
 .hero {
-
+    display: flex;
     min-width: 0;
     height: 100vh;
     color: var(--color005);
-    position: relative;
-
-    overflow: hidden;
+    padding: 1em;
     border-bottom: 1px solid var(--color007);
 }
 
@@ -18,9 +16,9 @@
     grid-column: 1;
     grid-row: 2;
     padding: 4em;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 1em;
 
 }
@@ -96,5 +94,14 @@
 @media (width <=760px) {
     .hero .container {
         padding: 2em;
+    }
+
+    .hero .container div .btn {
+        width: 100%;
+        /* Takes up the full container width */
+        max-width: 100%;
+        /* Prevents it from exceeding the parent */
+        flex: 0 0 auto;
+        /* Stops flex from trying to shrink/grow it weirdly */
     }
 }
