@@ -1,75 +1,94 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+@import url('utility.css');
+
+
+
+
+.hero {
+
+    min-width: 0;
+    height: 100vh;
+    color: var(--color005);
+    position: relative;
+    padding: 180px 0;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color007);
 }
 
-:root {
-    --mainColor: rgb(253, 221, 181);
-    --col001: rgb(17, 8, 0);
-    --col001-T: rgba(7, 3, 0, 0.96);
-    --col002: rgb(255, 140, 0);
-    --col003: rgb(255, 237, 217);
-    --sh001: rgba(170, 129, 78, 0.593);
-    --transitions: 500ms ease-in-out;
-    --col004: rgb(46, 25, 9);
-}
-
-body {
-    background: var(--mainColor);
-    color: var(--col001);
-}
-
-a {
-    text-decoration: none;
-    color: var(--col001);
-    cursor: pointer;
-}
-
-.nav {
+.hero .container {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 4em;
     display: flex;
-    top: 0%;
-    z-index: 10000;
-    position: sticky;
-    background: var(--col001-T);
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+.hero .container h1 {
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: var(--font002);
+    line-height: 1.1;
+}
+
+.hero .container p {
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 16px;
+    color: var(--color003);
+    max-width: 460px
+}
+
+.hero .container h1 span {
+    color: var(--color004);
+}
+
+.hero .container div {
+    display: flex;
+    gap: 16px;
+    margin-top: 36px;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-
-    backdrop-filter: blur(5px);
 }
 
-.nav h1 {
-    margin-left: 1em;
-    color: var(--mainColor);
-}
-
-.nav ul {
-    display: flex;
-    list-style: none;
-    margin-right: 2em;
-}
-
-.nav ul li {
-    padding: 2em;
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-.nav ul li a {
+.hero .container div .btn {
+    display: inline-block;
+    text-align: center;
+    gap: 8px;
+    width: 28em;
+    padding: 1em;
+    min-width: 0;
     text-decoration: none;
-    color: var(--mainColor);
+    font-weight: 400;
+    font-size: 13.5px;
+    border-radius: 2px;
+    font-family: "Bebas Neue", sans-serif;
+
+    font-style: normal;
+
+    text-transform: uppercase;
+    transition: transform .18s;
 }
 
-.nav ul li a:hover {
-    color: var(--col002);
+.hero .container div .main-btn {
+    background: var(--color004);
+    color: var(--color001);
 }
 
+.hero .container div .explore-btn {
+    background: transparent;
+    border-bottom: 1px solid var(--color005);
+    color: var(--color005);
 
+}
 
-.footer {
-    display: grid;
-    font-size: 1em;
+.experiance {
+    height: 4vh;
+}
 
+.explore {
+    padding: 100px 0;
+    height: 100px;
+    background: var(--color005);
+    color: var(--color001);
 }
