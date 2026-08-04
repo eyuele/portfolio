@@ -89,7 +89,7 @@ a {
     text-decoration: none;
     color: var(--color005);
     font-family: var(--fontStyle001);
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 500;
     padding: 12px 25px;
     border: 1px solid var(--color005);

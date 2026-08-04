@@ -81,32 +81,50 @@
 }
 
 .experiance {
-    display: grid;
-    grid-template-columns: 10% auto 10%;
-    grid-template-rows: 1fr auto 1fr;
-    padding: 5em 0;
-    height: auto;
+    padding: 2em 1em;
     border-top: 1px solid var(--color007);
     border-bottom: 1px solid var(--color007);
 }
 
-.experiance .cardcontainer {
-    grid-column: 2;
-    grid-row: 2;
+.experiance .container {
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    gap: 2em;
+
+
 }
 
 .experiance .card {
-    text-align: center;
-    font-size: 30px;
-    font-family: var(--fontStyle001);
-    padding: 2em 2em;
-    max-width: 8em;
 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+
+
+
+}
+
+.experiance .card p {
     color: var(--color004);
-    border-right: 1px solid var(--color007);
+    width: 20rem;
+    height: 9rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 2rem;
+    font-size: 3rem;
+    font-family: var(--fontStyle001);
+}
+
+.experiance .container span {
+    background: var(--color007);
+    width: 2px;
+    height: 10em;
 }
 
 .explore {
@@ -131,14 +149,20 @@
         /* Stops flex from trying to shrink/grow it weirdly */
     }
 
-    /*.experiance .card {
-        grid-column: 2;
-        display: block;
-    }*/
+    .experiance .container {
 
-    .experiance .card {
-        border: none;
-        border-top: 1px solid var(--color007);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
     }
+
+
+    .experiance .container span {
+        width: 20em;
+        height: 1px;
+    }
+
+
 }
