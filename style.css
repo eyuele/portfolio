@@ -9,7 +9,7 @@
     height: 100vh;
     color: var(--color005);
     position: relative;
-    padding: 150px 0;
+
     overflow: hidden;
     border-bottom: 1px solid var(--color007);
 }
@@ -91,4 +91,10 @@
     height: 100px;
     background: var(--color005);
     color: var(--color001);
+}
+
+@media (width <=760px) {
+    .hero .container {
+        padding: 2em;
+    }
 }
