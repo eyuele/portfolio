@@ -1,5 +1,8 @@
 @import url('utility.css');
 
+* {
+    box-sizing: border-box;
+}
 
 
 
@@ -9,18 +12,17 @@
     height: 100vh;
     color: var(--color005);
     padding: 1em;
-
+    justify-content: center;
 }
 
 .hero .container {
-    grid-column: 1;
-    grid-row: 2;
-    padding: 4em;
-    justify-content: center;
     display: flex;
+    padding: 4em;
+    height: 100%;
+    max-width: 80em;
     flex-direction: column;
+    justify-content: center;
     gap: 1em;
-
 }
 
 .hero .container h1 {
@@ -53,17 +55,15 @@
     display: inline-block;
     text-align: center;
     gap: 8px;
-    width: 28em;
-    padding: 1em;
+    padding: 1rem;
+    width: 28rem;
     min-width: 0;
     text-decoration: none;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 24px;
     border-radius: 2px;
     font-family: "Bebas Neue", sans-serif;
-
     font-style: normal;
-
     text-transform: uppercase;
     transition: transform var(--transitions);
 }
@@ -71,14 +71,51 @@
 .hero .container div .main-btn {
     background: var(--color004);
     color: var(--color001);
+    transition: var(--transitions);
+}
+
+.hero .container div .main-btn:hover {
+    transform: translateY(-5px);
+    background: var(--color008);
 }
 
 .hero .container div .explore-btn {
-    background: transparent;
-    border-bottom: 1px solid var(--color005);
+
+    position: relative;
+    z-index: 1;
+
+    /* ✅ Ensures the button itself is see-through */
+    border-bottom: 2px solid var(--color005);
     color: var(--color005);
 
 }
+
+.hero .container div .explore-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color005);
+
+    transform: scaleY(0);
+
+    transform-origin: bottom;
+    transition: transform var(--transitions);
+    z-index: -1;
+
+}
+
+.hero .container div .explore-btn:hover::before {
+    transform: scaleY(1);
+}
+
+.hero .container div .explore-btn:hover {
+    color: var(--color001);
+}
+
+
 
 .experiance {
     padding: 2em 1em;
@@ -121,6 +158,8 @@
     font-family: var(--fontStyle001);
 }
 
+
+/* Explore style */
 .experiance .container span {
     background: var(--color007);
     width: 2px;
@@ -128,12 +167,121 @@
 }
 
 .explore {
-    padding: 100px 0;
-    height: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
     background: var(--color005);
     color: var(--color001);
+    align-items: center;
+
 }
 
+.explore .container {
+    max-width: 80em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.explore .container .portfolio-btn {
+    display: inline-block;
+    padding: 1rem 5rem;
+    background: var(--color001);
+}
+
+
+/* contact form style */
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background: var(--color004);
+
+    align-items: center;
+}
+
+.contact .container {
+
+
+    display: flex;
+    max-width: 80em;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--color001);
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 1rem;
+    transform: translateY(100px);
+    font-family: var(--fontStyle003);
+    font-size: 1.2rem;
+
+
+}
+
+.contact .container form {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-family: var(--fontStyle003);
+
+}
+
+.contact .container form input {
+    width: 100%;
+    max-width: 60rem;
+    height: 3rem;
+    padding-left: 1em;
+    font-size: 1.2rem;
+    font-family: var(--fontStyle003);
+    color: var(--color005);
+    background: var(--color002);
+    outline: none;
+    border: none;
+
+    border-bottom: 2px solid var(--color004);
+}
+
+.contact .container form textarea {
+    background: var(--color002);
+    border: none;
+    resize: none;
+    height: 10rem;
+    max-width: 60rem;
+    color: var(--color005);
+    outline: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--color004);
+
+}
+
+.contact .container form button[type="submit"] {
+    max-width: 30rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    color: var(--color005);
+    background: var(--color001);
+    border: none;
+
+    border: 2px solid var(--color004);
+}
+
+.footer {
+    height: 50vh;
+    padding-top: 10em;
+}
+
+.footer .container {
+    background: var(--color002);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media (width <=760px) {
     .hero .container {
@@ -142,27 +290,19 @@
 
     .hero .container div .btn {
         width: 100%;
-        /* Takes up the full container width */
         max-width: 100%;
-        /* Prevents it from exceeding the parent */
         flex: 0 0 auto;
-        /* Stops flex from trying to shrink/grow it weirdly */
     }
 
     .experiance .container {
-
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
     }
-
 
     .experiance .container span {
         width: 20em;
         height: 1px;
     }
-
-
 }

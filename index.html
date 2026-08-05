@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
     <title>Eyuel Esubalew - Front End Web Developer</title>
     <link rel="stylesheet" href="style.css">
@@ -71,13 +71,44 @@
             </div>
         </section>
         <section class="explore" id="explore">
-            <h2>Explore My Work</h2>
-            <p>Check out my portfolio to see some of my recent projects.</p>
+            <div class="container">
+                <h2>Explore My Work</h2>
+                <p>Under construction.</p>
+                <p>view at a later date</p>
+
+                <a class="portfolio-btn" id="portfolio-btn" href="portfolio/index.html">View Portfolio</a>
+            </div>
         </section>
+
+        <!-- contact section to receive messages -->
+        <section class="contact" id="contact">
+            <!-- contact form -->
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form>
+                    <label for="name">Your Name</label>
+                    <input id="name" type="text" name="name" placeholder="Your Name" required>
+                    <label for="email">Your Email</label>
+                    <input id="email" type="email" name="email" placeholder="Your Email" required>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" type="message" name="message" placeholder="Your Message" required></textarea>
+                    <button id="submit-btn" type="submit">Send</button>
+                </form>
+
+        </section>
+
     </main>
     <!--footer of the page goes here-->
     <footer>
-
+        <section class="footer">
+            <div class="container">
+                <h1>Eyuel Esubalew</h1>
+                <div class="card"></div>
+            </div>
+        </section>
+        <section class="copyright">
+            <p>&copy; 2023 Eyuel Esubalew. All rights reserved.</p>
+        </section>
     </footer>
 </body>
 
