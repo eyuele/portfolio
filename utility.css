@@ -2,16 +2,17 @@
     --color001: #001416;
     --color001-t: rgba(0, 20, 22, 0.8);
     --color002: #003235;
-    --color003: #91afb1;
+    --color003: #5f8387;
     --color004: #d7a650;
     --color005: #fcefe0;
     --color006: #000000;
     --color007: #113135;
     --color008: #ffc560;
     --fontStyle001: "Bebas Neue", sans-serif;
-    --fontStyle002: "Google Sans Flex", sans-serif;
-    --fontStyle003: "Space Grotesk", sans-serif;
+    --fontStyle002: "Space Grotesk", sans-serif;
     --font001: clamp(20px, 3.5vh, 24rem);
     --font002: clamp(48px, 15vw, 140px);
+    --font003: clamp(20px, 1vw, 40px);
+    --font004: clamp(40px, 3vw, 80px);
     --transitions: 400ms ease;
 }

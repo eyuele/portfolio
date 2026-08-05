@@ -33,7 +33,7 @@
 }
 
 .hero .container p {
-    font-family: "Google Sans Flex", sans-serif;
+    font-family: var(--fontStyle002);
     font-size: 16px;
     color: var(--color003);
     max-width: 460px
@@ -62,7 +62,7 @@
     font-weight: 400;
     font-size: 24px;
     border-radius: 2px;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: var(--fontStyle001);
     font-style: normal;
     text-transform: uppercase;
     transition: transform var(--transitions);
@@ -87,6 +87,7 @@
     /* ✅ Ensures the button itself is see-through */
     border-bottom: 2px solid var(--color005);
     color: var(--color005);
+    transition: var(--transitions);
 
 }
 
@@ -155,17 +156,92 @@
     font-size: 3rem;
     padding: 2rem;
     font-size: 3rem;
+    line-height: 46px;
     font-family: var(--fontStyle001);
 }
 
 
-/* Explore style */
+
 .experiance .container span {
     background: var(--color007);
     width: 2px;
     height: 10em;
 }
 
+/* Why hire section me style */
+.why-hire-me {
+    min-height: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+    gap: 2em;
+}
+
+.why-hire-me .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+    gap: 4em;
+
+}
+
+.why-hire-me .container .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    max-width: 38rem;
+}
+
+.why-hire-me .container .card h2 {
+    padding: 0.5rem 1rem;
+
+    font-family: var(--fontStyle001);
+    font-size: var(--font004);
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--color004);
+}
+
+.why-hire-me .container h2 span {
+    color: var(--color004);
+}
+
+.why-hire-me .container .benefits-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+
+}
+
+.why-hire-me .container .benefit-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    grid-column: 1;
+    grid-row: 0;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: fit-content;
+    border-radius: 4px;
+    padding: 1em;
+    gap: 1em;
+
+}
+
+.benefit-item p {
+    color: var(--color003);
+    font-size: 18px;
+    font-family: var(--fontStyle002);
+}
+
+/* Explore style */
 .explore {
     display: flex;
     flex-direction: column;
@@ -174,18 +250,52 @@
     color: var(--color001);
     align-items: center;
 
+
 }
 
 .explore .container {
-    max-width: 80em;
     display: flex;
-    flex-direction: column;
+    max-width: 90em;
+    width: 100%;
+    height: 60vh;
+    gap: 1em;
+}
 
+.display-work {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.display-work button {
+    content: '>';
+    color: var(--color001);
+    background: transparent;
+    border: 2px solid var(--color004);
+    width: 4em;
+    height: 4em;
+
+    border-radius: 5em;
+}
+
+.display-work div {
+    display: flex;
+    overflow: hidden;
+    gap: 2em;
+}
+
+.display-work div img {
+    width: 15em;
 }
 
 .explore .container .portfolio-btn {
     display: inline-block;
     padding: 1rem 5rem;
+
     background: var(--color001);
 }
 
@@ -196,7 +306,6 @@
     justify-content: center;
     padding: 1em;
     background: var(--color004);
-
     align-items: center;
 }
 
@@ -204,9 +313,9 @@
 
 
     display: flex;
+    flex-direction: column;
     max-width: 80em;
     width: 100%;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -215,7 +324,7 @@
     padding: 2rem;
     gap: 1rem;
     transform: translateY(100px);
-    font-family: var(--fontStyle003);
+    font-family: var(--fontStyle002);
     font-size: 1.2rem;
 
 
@@ -223,39 +332,51 @@
 
 .contact .container form {
     width: 80%;
+    max-width: 60rem;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 1em;
-    font-family: var(--fontStyle003);
+    font-family: var(--fontStyle002);
+    transition: var(--transitions);
 
+}
+
+.contact .container form label {
+    color: var(--color003);
 }
 
 .contact .container form input {
     width: 100%;
-    max-width: 60rem;
     height: 3rem;
     padding-left: 1em;
     font-size: 1.2rem;
-    font-family: var(--fontStyle003);
+    font-family: var(--fontStyle002);
     color: var(--color005);
-    background: var(--color002);
+    background: var(--color001);
     outline: none;
     border: none;
 
     border-bottom: 2px solid var(--color004);
 }
 
+.contact .container form input::placeholder,
+.contact .container form textarea::placeholder {
+    color: var(--color005);
+}
+
 .contact .container form textarea {
-    background: var(--color002);
     border: none;
     resize: none;
-    height: 10rem;
-    max-width: 60rem;
+    height: 5rem;
+
+    background: var(--color001);
     color: var(--color005);
     outline: none;
     padding: 1rem;
     font-size: 1.2rem;
+    font-family: var(--fontStyle002);
     border-bottom: 2px solid var(--color004);
 
 }
@@ -264,6 +385,7 @@
     max-width: 30rem;
     height: 3rem;
     font-size: 1.2rem;
+    font-family: var(--fontStyle002);
     color: var(--color005);
     background: var(--color001);
     border: none;
@@ -281,6 +403,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    background: var(--color004);
+    align-items: center;
+
+}
+
+.copyright p {
+    color: var(--color001);
+    font-family: var(--fontStyle002);
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-size: var(--font003);
+    font-weight: 500;
 }
 
 @media (width <=760px) {
@@ -305,4 +444,22 @@
         width: 20em;
         height: 1px;
     }
+
+    .display-work {
+        display: none;
+    }
+
+    .contact {
+        padding: 1em;
+    }
+
+    .contact .container {
+        padding: 1em;
+    }
+
+    .contact .container form {
+        width: 100%;
+    }
+
+
 }
