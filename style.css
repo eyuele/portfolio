@@ -445,6 +445,11 @@
         height: 1px;
     }
 
+    .benefits-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
     .display-work {
         display: none;
     }
