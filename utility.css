@@ -12,7 +12,7 @@
     --fontStyle002: "Space Grotesk", sans-serif;
     --font001: clamp(20px, 3.5vh, 24rem);
     --font002: clamp(48px, 15vw, 140px);
-    --font003: clamp(20px, 1vw, 40px);
+    --font003: clamp(18px, 1%, 30px);
     --font004: clamp(40px, 3vw, 80px);
     --transitions: 400ms ease;
 }
