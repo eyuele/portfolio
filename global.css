@@ -112,3 +112,16 @@ a {
         display: none;
     }
 }
+
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

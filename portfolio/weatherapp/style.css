@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color001: rgb(18, 18, 18);
+    --color001-t: rgba(20, 20, 20, 0.9);
+    --color002: rgba(255, 255, 255, 0.139);
+    --color003: rgba(0, 0, 0, 0.048);
+    --color004: rgba(255, 255, 255, 0.75);
+    --color005: rgb(255, 123, 0);
+    --color006: rgb(0, 255, 26);
+    --color007: rgb(0, 255, 221);
+    --color008: rgb(187, 0, 255);
+    --color009: rgba(255, 0, 0, 0.1);
+    --color010: rgba(255, 0, 0, 0.893);
+    --color011: rgba(0, 255, 26, 0.1);
+    --fontstyle001: ;
+    --transitions001: 200ms ease-in-out;
+}
+
+body {
+    background: var(--color001);
+    font-family: var(--fontstyle001);
+}
+
+.navigation {
+    display: flex;
+    background: var(--color001-t);
+    justify-content: center;
+    height: 4em;
+    border-bottom: 1px solid var(--color002);
+    align-items: center;
+}
+
+.navigation .container {
+    display: flex;
+    max-width: 80em;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.navigation .container .themecontainer {
+    display: flex;
+    flex: 0 0 0;
+    gap: 1em;
+    align-items: center;
+    padding-left: 4em;
+    height: 100%;
+}
+
+.navigation .container .themecontainer button {
+    border: none;
+}
+
+.navigation .container .themecontainer button:hover {
+
+    transform: scale(1.2);
+    transition: var(--transitions001);
+}
+
+.navigation .container .themecontainer button:nth-child(1) {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: var(--color002);
+}
+
+.navigation .container .themecontainer button:nth-child(2) {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: var(--color005);
+}
+
+.navigation .container .themecontainer button:nth-child(3) {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: var(--color006);
+}
+
+.navigation .container .themecontainer button:nth-child(4) {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: var(--color007);
+}
+
+.navigation .container .themecontainer button:nth-child(5) {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background: var(--color008);
+}
+
+.navigation .container .darkmode {
+    padding-right: 2em;
+}
+
+.navigation .container .darkmode button {
+    border: 1px solid var(--color002);
+    background: var(--color001);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.default {
+    background: var(--color003);
+    border-radius: 2em;
+    border: 2px solid var(--color002);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+}
+
+.clockweather {
+    width: 100%;
+    max-width: 80rem;
+    height: 50vh;
+}
+
+
+
+.main .container {
+    display: flex;
+    width: 100%;
+    max-width: 80rem;
+    gap: 2em;
+
+}
+
+.main .container .weatherndquote {
+    width: 100%;
+
+    height: 20em;
+    gap: 2em;
+}
+
+
+.main .container .todolist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    height: 20em;
+    align-items: center;
+}
+
+.main .container .todolist .todolist-container {
+    display: flex;
+    width: 100%;
+    gap: 0.5em;
+}
+
+.main .container .todolist input[type="text"] {
+    border: 1px solid var(--color004);
+    background: var(--color003);
+    width: 100%;
+    height: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    outline: none;
+    color: var(--color004);
+}
+
+.main .container .todolist button {
+    border: 1px solid var(--color004);
+    background: var(--color003);
+    width: 7rem;
+    height: 3rem;
+    border-radius: 0 1em 1em 0;
+    color: var(--color004);
+    font-size: 1.1rem;
+    font-family: var(--fontstyle001);
+
+}
+
+.wrong {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: var(--color009);
+    border: 1px solid var(--color010);
+    color: var(--color010);
+}
+
+.right {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: var(--color011);
+    border: 1px solid var(--color006);
+    color: var(--color006);
+}
+
+@media (width <=1000px) {
+    .main .container {
+        display: flex;
+        flex-direction: column;
+    }
+}

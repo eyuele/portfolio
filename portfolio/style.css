@@ -1,0 +1,19 @@
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.buttons a {
+    border: none;
+    background: rgb(192, 175, 78);
+    max-width: 16em;
+    text-align: center;
+    padding: 1em 3em;
+    border-radius: 1em;
+    color: var(--color004);
+    font-size: 1.1rem;
+    font-family: var(--fontstyle001);
+    color: black;
+}
