@@ -47,39 +47,39 @@ const renderWeather = async (timezone) => {
         if (weatherStatus.main === "Clouds") {
             // 801-802: Few/scattered (slightly cloudy)
             if (weatherStatus.id <= 802) {
-                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud3.jpg)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud3.webp)');
             }
             else if (weatherStatus.id >= 803 && weatherStatus.id <= 820) {
 
-                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud1.jpg)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud1.webp)');
             }
             else {
                 // 803-804: Broken/overcast (fully cloudy)
-                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.jpg)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
             }
         }
         else if (weatherStatus.main === "Drizzle" || weatherStatus.main === "Rain") {
             // 502-504, 522-531: Heavy rain or heavy showers
             if (weatherStatus.id >= 502) {
-                document.documentElement.style.setProperty('--bgimage', 'url(image/rain1.jpg)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/rain1.webp)');
             } else {
                 // Light rain, moderate rain, or light drizzle
-                document.documentElement.style.setProperty('--bgimage', 'url(image/rain2.jpg)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/rain2.webp)');
             }
         }
         else if (weatherStatus.main === "Thunderstorm") {
-            document.documentElement.style.setProperty('--bgimage', 'url(image/thunderstorm.jpg)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/thunderstorm.webp)');
         }
         else if (weatherStatus.main === "Snow") {
-            document.documentElement.style.setProperty('--bgimage', 'url(image/snow.jpg)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/snow.webp)');
         }
         else if (["Mist", "Smoke", "Haze", "Dust", "Fog", "Sand", "Ash", "Squall", "Tornado"].includes(weatherStatus.main)) {
             // Grouped together as atmospheric conditions
-            document.documentElement.style.setProperty('--bgimage', 'url(image/atmosphere.jpg)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/atmosphere.webp)');
         }
         else {
             // Fallback for "Clear" (ID 800) or any unexpected status
-            document.documentElement.style.setProperty('--bgimage', 'url(image/sun.jpg)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/sun.webp)');
         }
 
 
@@ -92,6 +92,12 @@ const renderWeather = async (timezone) => {
 const countryField = document.getElementById("countryField");
 const getweatherbtn = document.getElementById("getweather");
 const resetButton = document.getElementById("reset");
+countryField.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        getweatherbtn.click();
+    }
+});
+
 getweatherbtn.addEventListener("click", () => {
 
 
@@ -102,6 +108,7 @@ getweatherbtn.addEventListener("click", () => {
 
 });
 resetButton.addEventListener("click", () => {
+
     count = 0;
     countryLocation = null;
     renderWeather(countryLocation);
@@ -109,3 +116,15 @@ resetButton.addEventListener("click", () => {
 })
 
 setInterval(renderTime, 1000);
+
+
+const todolistBtnShow = document.getElementById("todolistBtnShow");
+const todolistBtnHide = document.getElementById("todolistBtnHide");
+const todoPanel = document.getElementById("todolist");
+
+todolistBtnShow.addEventListener("click", () => {
+    todoPanel.classList.toggle("show");
+});
+todolistBtnHide.addEventListener("click", () => {
+    todoPanel.classList.toggle("show");
+});

@@ -12,6 +12,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="quote.js" defer></script>
+    <script src="todolist.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +31,7 @@
     </nav>
 
     <main class="main">
-        <section class="clockweather">
+        <section class="clockweather default">
             <ul>
                 <li id="clock" class="clock">--:--:--</li>
                 <li id="country" class="weather">location</li>
@@ -51,15 +53,29 @@
                     </div>
                     <a href="https://time.now">World Time API by Time.Now</a>
                 </div>
-                <div class="quote"></div>
             </section>
-
-            <section class="todolist default">
-                <div class="todolist-container">
-                    <input id="task-input" type="text" placeholder="Add a task">
-                    <button>ADD</button>
+            <section class="quote default">
+                <div class="quote-container">
+                    <p id="quoteText">Quote goes here</p>
+                    <p id="authorName">- Author</p>
+                    <button id="generateBtn">Generate Quote</button>
                 </div>
             </section>
+            <section class="todolist-section">
+                <button id="todolistBtnShow">go</button>
+                <div id="todolist" class="todolist default">
+
+                    <div class="todolist-header">
+                        <input id="taskInput" type="text" placeholder="Add a task">
+                        <button id="addBtn">ADD</button>
+                    </div>
+                    <div class="todolist-container show">
+                        <ul id="taskList"></ul>
+                    </div>
+                    <button id="todolistBtnHide">back</button>
+                </div>
+            </section>
+
         </div>
     </main>
 </body>

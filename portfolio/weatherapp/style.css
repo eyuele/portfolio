@@ -7,8 +7,8 @@
 :root {
     --color001: rgb(0, 0, 0);
     --color001-t: rgba(0, 0, 0, 0.654);
-    --color002: rgba(227, 203, 203, 0.176);
-    --color003: rgba(0, 0, 0, 0.149);
+    --color002: rgba(227, 203, 203, 0.271);
+    --color003: rgba(0, 0, 0, 0.565);
     --color004: rgb(255, 255, 255);
     --color005: rgb(255, 123, 0);
     --color006: rgb(0, 255, 26);
@@ -20,9 +20,11 @@
     --fontstyle001: "Bebas Neue", sans-serif;
     --fontstyle002: "Space Grotesk", sans-serif;
     --fontsize001: clamp(48px, 18vw, 140px);
-    --fontsize002: clamp(30px, 6vw, 70px);
+    --fontsize002: clamp(20px, 6vw, 70px);
+    --fontsize003: clamp(18px, 1vw, 40px);
+    --fontsize004: clamp(20px, 2vw, 40px);
     --transitions001: 200ms ease-in-out;
-    --bgimage: url(image/rain1.jpg);
+    --bgimage: url(image/rain1.webp);
 }
 
 body {
@@ -31,7 +33,7 @@ body {
     background: linear-gradient(var(--color001-t), var(--color001-t), var(--color001)), var(--bgimage);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 200em;
+    background-color: var(--color001);
 }
 
 .navigation {
@@ -109,8 +111,10 @@ a {
 
 .default {
     background: var(--color003);
-    border-radius: 2em;
-    border: 2px solid var(--color002);
+    border-radius: 1rem;
+    border: 1px solid var(--color002);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
 }
 
 .main {
@@ -130,6 +134,7 @@ a {
     width: 100%;
     height: 50vh;
     justify-content: center;
+
 }
 
 .clockweather ul {
@@ -183,9 +188,10 @@ a {
     display: flex;
     width: 100%;
     gap: 2em;
+    padding: 1em;
     padding-right: 1em;
-    height: 60vh;
-    gap: 1em;
+    height: 50vh;
+    gap: 2em;
 
 }
 
@@ -194,9 +200,9 @@ a {
     padding: 1em;
     width: 100%;
     max-width: 50em;
-    height: 20em;
+    max-height: 25em;
     gap: 2em;
-    backdrop-filter: blur(8px);
+
 }
 
 .main .container .weatherndquote .weather {
@@ -216,8 +222,7 @@ a {
 
 .main .container .weatherndquote .weather label {
     color: var(--color002);
-    font-size: 1.4rem;
-    -webkit-text-stroke: 0.4px var(--color004);
+    font-size: var(--fontsize003);
     text-shadow: 0px 0px 25px var(--color001);
 }
 
@@ -229,7 +234,7 @@ a {
     height: 3rem;
     border-radius: 4px;
     padding-left: 1rem;
-    font-size: 1.2rem;
+    font-size: var(--fontsize003);
     outline: none;
     color: var(--color004);
 }
@@ -246,30 +251,87 @@ a {
     height: 3rem;
     border-radius: 4px;
     color: var(--color004);
-    font-size: 1.3rem;
+    font-size: var(--fontsize003);
     outline: none;
     font-family: var(--fontstyle001);
 
 }
 
+.todolist-section {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+}
+
+.todolist-section button {
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 1px solid var(--color002);
+    background: var(--color001-t);
+    border-radius: 1em;
+}
+
 .main .container .todolist {
-    display: flex;
+    display: none;
     position: fixed;
     right: 12px;
     bottom: 12px;
     flex-direction: column;
     padding: 1em;
-    height: 6rem;
-    width: 6rem;
+    height: 28rem;
     border-radius: 1em;
     align-items: center;
     backdrop-filter: blur(8px);
+    gap: 1em;
+}
+
+.main .container .todolist.show {
+    display: flex;
+}
+
+#todolistBtnHide {
+    border-radius: 12px;
+}
+
+.main .container .todolist.hide {
+    display: flex;
+}
+
+.todolist-header {
+    display: flex;
+    gap: 1em;
 }
 
 .main .container .todolist .todolist-container {
-    display: none;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     gap: 0.5em;
+    scrollbar-color: var(--color002) var(--color001-t);
+    scrollbar-width: auto;
+    overflow-y: auto;
+    max-height: 18em;
+}
+
+
+
+.todolist-container::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.todolist-container::-webkit-scrollbar-track {
+    background: var(--color001-t);
+    /* Background color of the track */
+    border-radius: 10px;
+}
+
+.todolist-container::-webkit-scrollbar-thumb {
+    background: var(--color002);
+    /* Color of the draggable slider */
+    border-radius: 10px;
+    /* Rounded edges for the slider */
+    border: 3px solid var(--color004);
 }
 
 .main .container .todolist input[type="text"] {
@@ -277,7 +339,7 @@ a {
     background: var(--color003);
     width: 100%;
     height: 3rem;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 12px 0 0 12px;
     padding-left: 1rem;
     font-size: 1.2rem;
     outline: none;
@@ -289,12 +351,77 @@ a {
     background: var(--color003);
     width: 7rem;
     height: 3rem;
-    border-radius: 0 1em 1em 0;
+    border-radius: 0 12px 12px 0;
     color: var(--color004);
     font-size: 1.1rem;
     font-family: var(--fontstyle001);
+}
+
+.main .container .todolist .todolist-container ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    color: var(--color004);
 
 }
+
+.main .container .todolist .todolist-container ul div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color002);
+}
+
+.main .container .todolist .todolist-container ul div li {
+
+    font-size: var(--fontsize003);
+}
+
+.quote {
+    width: 100%;
+    max-height: 25rem;
+    font-size: var(--fontsize004);
+    color: var(--color004);
+    padding: 1rem;
+}
+
+.quote .quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 1em;
+    gap: 0.5em;
+
+}
+
+.quote .quote-container p:nth-child(1)::before {
+    content: '"';
+}
+
+.quote .quote-container p:nth-child(1)::after {
+    content: '"';
+}
+
+.quote .quote-container p:nth-child(2) {
+    text-align: right;
+    width: 100%;
+}
+
+.quote .quote-container button {
+    border: 1px solid var(--color002);
+    background: var(--color003);
+    width: 12rem;
+    height: 4rem;
+    border-radius: 4px;
+    color: var(--color004);
+    font-size: var(--fontsize003);
+    outline: none;
+    font-family: var(--fontstyle001);
+}
+
 
 .wrong {
     width: 100%;
@@ -313,6 +440,8 @@ a {
     border: 1px solid var(--color006);
     color: var(--color006);
 }
+
+
 
 @media (width <=1000px) {
     .main .container {
