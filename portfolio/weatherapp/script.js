@@ -115,7 +115,7 @@ resetButton.addEventListener("click", () => {
     countryField.value = ""
 })
 
-setInterval(renderTime, 1000);
+
 
 
 const todolistBtnShow = document.getElementById("todolistBtnShow");
@@ -128,3 +128,6 @@ todolistBtnShow.addEventListener("click", () => {
 todolistBtnHide.addEventListener("click", () => {
     todoPanel.classList.toggle("show");
 });
+
+
+setInterval(renderTime, 1000);

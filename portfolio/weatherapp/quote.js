@@ -17,6 +17,7 @@ async function getQuote() {
     }
     catch (error) {
         console.error('Failed to fetch quote:', error);
+        quoteText.textContent = error;
     }
 }
 
