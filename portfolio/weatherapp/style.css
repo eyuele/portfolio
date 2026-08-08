@@ -5,11 +5,11 @@
 }
 
 :root {
-    --color001: rgb(18, 18, 18);
-    --color001-t: rgba(20, 20, 20, 0.9);
-    --color002: rgba(255, 255, 255, 0.139);
-    --color003: rgba(0, 0, 0, 0.048);
-    --color004: rgba(255, 255, 255, 0.75);
+    --color001: rgb(0, 0, 0);
+    --color001-t: rgba(0, 0, 0, 0.654);
+    --color002: rgba(227, 203, 203, 0.176);
+    --color003: rgba(0, 0, 0, 0.149);
+    --color004: rgb(255, 255, 255);
     --color005: rgb(255, 123, 0);
     --color006: rgb(0, 255, 26);
     --color007: rgb(0, 255, 221);
@@ -17,22 +17,36 @@
     --color009: rgba(255, 0, 0, 0.1);
     --color010: rgba(255, 0, 0, 0.893);
     --color011: rgba(0, 255, 26, 0.1);
-    --fontstyle001: ;
+    --fontstyle001: "Bebas Neue", sans-serif;
+    --fontstyle002: "Space Grotesk", sans-serif;
+    --fontsize001: clamp(48px, 18vh, 140px);
+    --fontsize002: clamp(20px, 4vw, 70px);
     --transitions001: 200ms ease-in-out;
+    --bgimage: url(image/rain1.jpg);
 }
 
 body {
-    background: var(--color001);
+
     font-family: var(--fontstyle001);
+    background: linear-gradient(var(--color001-t), var(--color001-t), var(--color001)), var(--bgimage);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 200em;
 }
 
 .navigation {
     display: flex;
     background: var(--color001-t);
+    backdrop-filter: blur(8px);
     justify-content: center;
     height: 4em;
     border-bottom: 1px solid var(--color002);
     align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color004);
 }
 
 .navigation .container {
@@ -41,7 +55,7 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(5px);
+
 }
 
 .navigation .container .themecontainer {
@@ -68,35 +82,17 @@ body {
     width: 1.5rem;
     border-radius: 50%;
     background: var(--color002);
+    border: 1px solid var(--color003);
 }
 
 .navigation .container .themecontainer button:nth-child(2) {
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
-    background: var(--color005);
+    background: var(--color001);
+    border: 2px solid var(--color002);
 }
 
-.navigation .container .themecontainer button:nth-child(3) {
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    background: var(--color006);
-}
-
-.navigation .container .themecontainer button:nth-child(4) {
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    background: var(--color007);
-}
-
-.navigation .container .themecontainer button:nth-child(5) {
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    background: var(--color008);
-}
 
 .navigation .container .darkmode {
     padding-right: 2em;
@@ -110,6 +106,7 @@ body {
     border-radius: 50%;
 }
 
+
 .default {
     background: var(--color003);
     border-radius: 2em;
@@ -122,43 +119,155 @@ body {
     align-items: center;
     gap: 2em;
     padding: 2em;
+
+    height: 100vh;
 }
 
 .clockweather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 80rem;
     height: 50vh;
+    justify-content: center;
 }
 
+.clockweather ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.clockweather ul li:nth-child(1) {
+    font-size: var(--fontsize001);
+    color: var(--color002);
+    -webkit-text-stroke: 2px var(--color004);
+    text-shadow: 0px 0px 25px var(--color001);
+
+}
+
+
+.clockweather ul li:nth-child(2) {
+    color: var(--color004);
+    font-size: var(--fontsize002);
+    text-shadow: 0px 0px 15px 5px var(--color001);
+}
+
+.clockweather div p {
+    color: var(--color004);
+    font-size: var(--fontsize002);
+    text-shadow: 0px 0px 15px 5px var(--color001);
+}
+
+.clockweather div {
+    display: flex;
+    justify-content: center;
+}
+
+.clockweather div span {
+    width: 1em;
+    height: 1em;
+}
+
+.clockweather div span img {
+    width: 6em;
+    height: 6em;
+}
 
 
 .main .container {
     display: flex;
     width: 100%;
-    max-width: 80rem;
     gap: 2em;
+    padding-right: 1em;
+
 
 }
 
 .main .container .weatherndquote {
-    width: 100%;
 
+    padding: 1em;
+    width: 100%;
+    max-width: 50em;
     height: 20em;
     gap: 2em;
+    backdrop-filter: blur(8px);
 }
 
+.main .container .weatherndquote .weather {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main .container .weatherndquote .weather a {
+    padding: 1rem;
+    text-align: center;
+    font-size: 18px;
+    background: var(--color003);
+    max-width: 18rem;
+    border: 1px solid var(--color002);
+}
+
+.main .container .weatherndquote .weather label {
+    color: var(--color002);
+    font-size: 1.4rem;
+    -webkit-text-stroke: 0.4px var(--color004);
+    text-shadow: 0px 0px 25px var(--color001);
+}
+
+.main .container .weatherndquote .weather input {
+    border: 1px solid var(--color002);
+    background: var(--color003);
+    width: 100%;
+
+    height: 3rem;
+    border-radius: 4px;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    outline: none;
+    color: var(--color004);
+}
+
+.main .container .weatherndquote div {
+    display: flex;
+    gap: 1em;
+}
+
+.main .container .weatherndquote div button {
+    border: 1px solid var(--color002);
+    background: var(--color003);
+    width: 7rem;
+    height: 3rem;
+    border-radius: 4px;
+    color: var(--color004);
+    font-size: 1.3rem;
+    outline: none;
+    font-family: var(--fontstyle001);
+
+}
 
 .main .container .todolist {
     display: flex;
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
     flex-direction: column;
-    width: 100%;
     padding: 1em;
-    height: 20em;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 1em;
     align-items: center;
+    backdrop-filter: blur(8px);
 }
 
 .main .container .todolist .todolist-container {
-    display: flex;
+    display: none;
     width: 100%;
     gap: 0.5em;
 }
