@@ -27,6 +27,30 @@
     --bgimage: url(image/cloud1.webp);
 }
 
+html {
+    scrollbar-color: var(--color002) var(--color001-t);
+    scrollbar-width: auto;
+}
+
+html::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--color001-t);
+    /* Background color of the track */
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--color002);
+    /* Color of the draggable slider */
+    border-radius: 10px;
+    /* Rounded edges for the slider */
+    border: 3px solid var(--color004);
+}
+
 body {
 
     font-family: var(--fontstyle001);
@@ -123,7 +147,6 @@ a {
     align-items: center;
     gap: 2em;
     padding: 2em;
-
     height: 100vh;
 }
 
@@ -190,7 +213,6 @@ a {
     gap: 2em;
     padding: 1em;
     padding-right: 1em;
-    height: 50vh;
     gap: 2em;
 
 }
@@ -200,7 +222,6 @@ a {
     padding: 1em;
     width: 100%;
     max-width: 50em;
-    max-height: 25em;
     gap: 2em;
 
 }
@@ -307,32 +328,12 @@ a {
     flex-direction: column;
     width: 100%;
     gap: 0.5em;
-    scrollbar-color: var(--color002) var(--color001-t);
-    scrollbar-width: auto;
+
     overflow-y: auto;
     max-height: 18em;
 }
 
 
-
-.todolist-container::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
-.todolist-container::-webkit-scrollbar-track {
-    background: var(--color001-t);
-    /* Background color of the track */
-    border-radius: 10px;
-}
-
-.todolist-container::-webkit-scrollbar-thumb {
-    background: var(--color002);
-    /* Color of the draggable slider */
-    border-radius: 10px;
-    /* Rounded edges for the slider */
-    border: 3px solid var(--color004);
-}
 
 .main .container .todolist input[type="text"] {
     border: 1px solid var(--color004);
@@ -394,7 +395,14 @@ a {
     align-items: left;
     padding: 1em;
     gap: 0.5em;
+    overflow-y: auto;
+    height: 4em;
+    max-height: 28rem;
 
+}
+
+.quote .quote-container .quoteText {
+    overflow-y: auto;
 }
 
 .quote .quote-container p:nth-child(1)::before {
@@ -410,7 +418,7 @@ a {
     width: 100%;
 }
 
-.quote .quote-container button {
+.quote button {
     border: 1px solid var(--color002);
     background: var(--color003);
     width: 12rem;
