@@ -6,13 +6,13 @@ const genQuote = document.getElementById("generateBtn");
 getQuote();
 async function getQuote() {
     try {
-        const response = await fetch('https://api.quotable.io/random');
+        const response = await fetch('https://dummyjson.com/quotes/random');
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const newQuote = await response.json();
-        quoteText.textContent = newQuote.content;
+        quoteText.textContent = newQuote.quote;
         authorName.textContent = `-${newQuote.author}`;
     }
     catch (error) {
