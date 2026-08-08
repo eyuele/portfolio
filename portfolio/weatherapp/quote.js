@@ -21,7 +21,6 @@ async function getQuote() {
 }
 
 genQuote.addEventListener("click", () => {
-    alert("hehe");
     getQuote();
 })
 
