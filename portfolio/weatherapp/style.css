@@ -457,4 +457,8 @@ a {
         flex-direction: column;
         height: 85vh;
     }
+
+    .quote .quote-container {
+        height: 12rem;
+    }
 }
