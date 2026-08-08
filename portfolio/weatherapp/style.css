@@ -19,8 +19,8 @@
     --color011: rgba(0, 255, 26, 0.1);
     --fontstyle001: "Bebas Neue", sans-serif;
     --fontstyle002: "Space Grotesk", sans-serif;
-    --fontsize001: clamp(48px, 18vh, 140px);
-    --fontsize002: clamp(20px, 4vw, 70px);
+    --fontsize001: clamp(48px, 18vw, 140px);
+    --fontsize002: clamp(30px, 6vw, 70px);
     --transitions001: 200ms ease-in-out;
     --bgimage: url(image/rain1.jpg);
 }
@@ -169,16 +169,15 @@ a {
     justify-content: center;
 }
 
-.clockweather div span {
-    width: 1em;
-    height: 1em;
+.clockweather div div {
+    width: var(--fontsize002);
+    height: var(--fontsize002);
 }
 
-.clockweather div span img {
-    width: 6em;
-    height: 6em;
+.clockweather div div img {
+    height: 100%;
+    width: 100%;
 }
-
 
 .main .container {
     display: flex;
