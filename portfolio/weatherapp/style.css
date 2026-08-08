@@ -24,7 +24,7 @@
     --fontsize003: clamp(18px, 1vw, 40px);
     --fontsize004: clamp(20px, 2vw, 40px);
     --transitions001: 200ms ease-in-out;
-    --bgimage: url(image/rain1.webp);
+    --bgimage: url(image/cloud1.webp);
 }
 
 body {
