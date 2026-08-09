@@ -32,6 +32,7 @@ const renderWeather = async (timezone) => {
     try {
         // FIXED: Added $, added &units=metric for Celsius
         const weatherResponse = await fetch(`/api/weather?city=${city}`);
+
         if (!weatherResponse.ok) throw new Error('Weather HTTP error');
         const weatherData = await weatherResponse.json();
         const body = document.querySelector("body");
