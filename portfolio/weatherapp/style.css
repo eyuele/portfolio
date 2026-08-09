@@ -19,10 +19,10 @@
     --color011: rgba(0, 255, 26, 0.1);
     --fontstyle001: "Bebas Neue", sans-serif;
     --fontstyle002: "Space Grotesk", sans-serif;
-    --fontsize001: clamp(48px, 18vw, 140px);
-    --fontsize002: clamp(20px, 6vw, 70px);
+    --fontsize001: clamp(48px, 12vw, 140px);
+    --fontsize002: clamp(20px, 1.8vw, 50px);
     --fontsize003: clamp(18px, 1vw, 40px);
-    --fontsize004: clamp(20px, 2vw, 40px);
+    --fontsize004: clamp(20px, 1.4vw, 40px);
     --transitions001: 200ms ease-in-out;
     --bgimage: url(image/cloud1.webp);
 }
