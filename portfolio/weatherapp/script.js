@@ -116,7 +116,7 @@ getweatherbtn.addEventListener("click", () => {
         valueValidator.appendChild(li);
         setTimeout(() => {
             valueValidator.removeChild(li);
-        }, 3000);
+        }, 500);
         countryLocation = countryField.value;
         renderWeather(countryLocation);
     }
