@@ -35,7 +35,7 @@ const renderWeather = async (timezone) => {
 
         if (!weatherResponse.ok) throw new Error('Weather HTTP error');
         const weatherData = await weatherResponse.json();
-        const body = document.querySelector("body");
+
         const weatherStatus = weatherData.weather[0];
         // Display temperature & city
         const temp = Math.round(weatherData.main.temp);
@@ -47,39 +47,39 @@ const renderWeather = async (timezone) => {
         if (weatherStatus.main === "Clouds") {
             // 801-802: Few/scattered (slightly cloudy)
             if (weatherStatus.id <= 802) {
-                body.documentElement.style.setProperty('--bgimage', 'url(image/cloud3.webp)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud3.webp)');
             }
             else if (weatherStatus.id >= 803 && weatherStatus.id <= 820) {
 
-                body.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
             }
             else {
                 // 803-804: Broken/overcast (fully cloudy)
-                body.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
             }
         }
         else if (weatherStatus.main === "Drizzle" || weatherStatus.main === "Rain") {
             // 502-504, 522-531: Heavy rain or heavy showers
             if (weatherStatus.id >= 502) {
-                body.documentElement.style.setProperty('--bgimage', 'url(image/rain1.webp)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/rain1.webp)');
             } else {
                 // Light rain, moderate rain, or light drizzle
-                body.documentElement.style.setProperty('--bgimage', 'url(image/rain2.webp)');
+                document.documentElement.style.setProperty('--bgimage', 'url(image/rain2.webp)');
             }
         }
         else if (weatherStatus.main === "Thunderstorm") {
-            body.documentElement.style.setProperty('--bgimage', 'url(image/thunderstorm.webp)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/thunderstorm.webp)');
         }
         else if (weatherStatus.main === "Snow") {
-            body.documentElement.style.setProperty('--bgimage', 'url(image/snow.webp)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/snow.webp)');
         }
         else if (["Mist", "Smoke", "Haze", "Dust", "Fog", "Sand", "Ash", "Squall", "Tornado"].includes(weatherStatus.main)) {
             // Grouped together as atmospheric conditions
-            body.documentElement.style.setProperty('--bgimage', 'url(image/atmosphere.webp)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/atmosphere.webp)');
         }
         else {
             // Fallback for "Clear" (ID 800) or any unexpected status
-            body.documentElement.style.setProperty('--bgimage', 'url(image/sun.webp)');
+            document.documentElement.style.setProperty('--bgimage', 'url(image/sun.webp)');
         }
 
 
