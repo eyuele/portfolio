@@ -56,7 +56,7 @@ body {
     font-family: var(--fontstyle001);
     background: linear-gradient(var(--color001-t), var(--color001-t), var(--color001)), var(--bgimage);
     background-repeat: no-repeat;
-    background-size: cover;
+
     background-color: var(--color001);
 }
 
@@ -309,6 +309,7 @@ a {
     align-items: center;
     backdrop-filter: blur(8px);
     gap: 1em;
+    transition: var(--transitions001);
 }
 
 .main .container .todolist.show {

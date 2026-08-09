@@ -27,15 +27,14 @@ const renderWeather = async (timezone) => {
     if (!timezone) return;
     // Extract city name (e.g., "Africa/Addis_Ababa" → "Addis Ababa")
     const city = timezone.split('/').pop().replace(/_/g, ' ');
-    const response = await fetch(`/api/weather?city=${city}`);// Store as a constant
+
 
     try {
         // FIXED: Added $, added &units=metric for Celsius
-        const weatherResponse = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-        );
+        const weatherResponse = await fetch(`/api/weather?city=${city}`);
         if (!weatherResponse.ok) throw new Error('Weather HTTP error');
         const weatherData = await weatherResponse.json();
+        const body = document.querySelector("body");
         const weatherStatus = weatherData.weather[0];
         // Display temperature & city
         const temp = Math.round(weatherData.main.temp);
@@ -47,39 +46,39 @@ const renderWeather = async (timezone) => {
         if (weatherStatus.main === "Clouds") {
             // 801-802: Few/scattered (slightly cloudy)
             if (weatherStatus.id <= 802) {
-                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud3.webp)');
+                body.documentElement.style.setProperty('--bgimage', 'url(image/cloud3.webp)');
             }
             else if (weatherStatus.id >= 803 && weatherStatus.id <= 820) {
 
-                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud1.webp)');
+                body.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
             }
             else {
                 // 803-804: Broken/overcast (fully cloudy)
-                document.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
+                body.documentElement.style.setProperty('--bgimage', 'url(image/cloud2.webp)');
             }
         }
         else if (weatherStatus.main === "Drizzle" || weatherStatus.main === "Rain") {
             // 502-504, 522-531: Heavy rain or heavy showers
             if (weatherStatus.id >= 502) {
-                document.documentElement.style.setProperty('--bgimage', 'url(image/rain1.webp)');
+                body.documentElement.style.setProperty('--bgimage', 'url(image/rain1.webp)');
             } else {
                 // Light rain, moderate rain, or light drizzle
-                document.documentElement.style.setProperty('--bgimage', 'url(image/rain2.webp)');
+                body.documentElement.style.setProperty('--bgimage', 'url(image/rain2.webp)');
             }
         }
         else if (weatherStatus.main === "Thunderstorm") {
-            document.documentElement.style.setProperty('--bgimage', 'url(image/thunderstorm.webp)');
+            body.documentElement.style.setProperty('--bgimage', 'url(image/thunderstorm.webp)');
         }
         else if (weatherStatus.main === "Snow") {
-            document.documentElement.style.setProperty('--bgimage', 'url(image/snow.webp)');
+            body.documentElement.style.setProperty('--bgimage', 'url(image/snow.webp)');
         }
         else if (["Mist", "Smoke", "Haze", "Dust", "Fog", "Sand", "Ash", "Squall", "Tornado"].includes(weatherStatus.main)) {
             // Grouped together as atmospheric conditions
-            document.documentElement.style.setProperty('--bgimage', 'url(image/atmosphere.webp)');
+            body.documentElement.style.setProperty('--bgimage', 'url(image/atmosphere.webp)');
         }
         else {
             // Fallback for "Clear" (ID 800) or any unexpected status
-            document.documentElement.style.setProperty('--bgimage', 'url(image/sun.webp)');
+            body.documentElement.style.setProperty('--bgimage', 'url(image/sun.webp)');
         }
 
 
@@ -107,10 +106,16 @@ getweatherbtn.addEventListener("click", () => {
         li.textContent = "Please enter a valid city in the field";
         li.classList.add("wrong");
         valueValidator.appendChild(li);
+        setTimeout(() => {
+            valueValidator.removeChild(li);
+        }, 3000);
     } else {
         li.textContent = "Fetching...";
         li.classList.add("right");
         valueValidator.appendChild(li);
+        setTimeout(() => {
+            valueValidator.removeChild(li);
+        }, 3000);
         countryLocation = countryField.value;
         renderWeather(countryLocation);
     }
