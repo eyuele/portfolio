@@ -210,10 +210,10 @@ a {
 .main .container {
     display: flex;
     width: 100%;
-    gap: 2em;
     padding: 1em;
     padding-right: 1em;
     gap: 2em;
+    height: 24rem;
 
 }
 
@@ -402,7 +402,7 @@ a {
     padding: 1em;
     gap: 0.5em;
     overflow-y: auto;
-    height: 4em;
+    height: 15.7rem;
     max-height: 28rem;
 
 }
