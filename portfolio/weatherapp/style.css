@@ -290,6 +290,11 @@ a {
     border: 1px solid var(--color002);
     background: var(--color001-t);
     border-radius: 1em;
+    color: var(--color004);
+}
+
+.todolist-section button svg {
+    width: 35px;
 }
 
 .main .container .todolist {
@@ -430,6 +435,9 @@ a {
     font-family: var(--fontstyle001);
 }
 
+#valueValidator {
+    list-style: none;
+}
 
 .wrong {
     width: 100%;

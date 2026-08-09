@@ -27,7 +27,7 @@ const renderWeather = async (timezone) => {
     if (!timezone) return;
     // Extract city name (e.g., "Africa/Addis_Ababa" → "Addis Ababa")
     const city = timezone.split('/').pop().replace(/_/g, ' ');
-    const apiKey = 'b7dee92d71dde81fdca66c4c8a4cbb05'; // Store as a constant
+    const response = await fetch(`/api/weather?city=${city}`);// Store as a constant
 
     try {
         // FIXED: Added $, added &units=metric for Celsius
@@ -99,13 +99,21 @@ countryField.addEventListener("keydown", (event) => {
 });
 
 getweatherbtn.addEventListener("click", () => {
+    const valueValidator = document.getElementById("valueValidator");
+    const li = document.createElement("li");
+    valueValidator.innerHTML = '';
 
-
-    countryLocation = countryField.value;
-    renderWeather(countryLocation);
-
-
-
+    if (countryField.value === "") {
+        li.textContent = "Please enter a valid city in the field";
+        li.classList.add("wrong");
+        valueValidator.appendChild(li);
+    } else {
+        li.textContent = "Fetching...";
+        li.classList.add("right");
+        valueValidator.appendChild(li);
+        countryLocation = countryField.value;
+        renderWeather(countryLocation);
+    }
 });
 resetButton.addEventListener("click", () => {
 
@@ -114,8 +122,6 @@ resetButton.addEventListener("click", () => {
     renderWeather(countryLocation);
     countryField.value = ""
 })
-
-
 
 
 const todolistBtnShow = document.getElementById("todolistBtnShow");
