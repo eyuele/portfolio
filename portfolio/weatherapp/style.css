@@ -7,7 +7,7 @@
 :root {
     --color001: rgb(0, 0, 0);
     --color001-t: rgba(0, 0, 0, 0.654);
-    --color002: rgba(227, 203, 203, 0.271);
+    --color002: rgba(252, 251, 251, 0.11);
     --color003: rgba(0, 0, 0, 0.565);
     --color004: rgb(255, 255, 255);
     --color005: rgb(255, 123, 0);
@@ -137,7 +137,7 @@ a {
     background: var(--color003);
     border-radius: 1rem;
     border: 1px solid var(--color002);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
     padding: 1rem;
 }
 
