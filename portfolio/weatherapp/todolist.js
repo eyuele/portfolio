@@ -38,11 +38,9 @@ function renderTasks() {
         button.textContent = "X";
         if (checkbox.checked) {
             li.style.textDecoration = "line-through";
-            li.style.color = "var(--col007)";
         }
         else {
             li.style.textDecoration = "none"
-            li.style.color = "var(--col001)"
         }
         button.addEventListener("click", () => {
             tasks.splice(index, 1);
