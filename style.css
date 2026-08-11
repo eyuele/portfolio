@@ -126,7 +126,6 @@
 
 .experiance .container {
     display: flex;
-    flex-wrap: wrap;
     text-align: center;
     justify-content: center;
     gap: 2em;
@@ -148,8 +147,7 @@
 
 .experiance .card p {
     color: var(--color004);
-    width: 20rem;
-    height: 9rem;
+    width: 14rem;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +163,6 @@
 .experiance .container span {
     background: var(--color007);
     width: 2px;
-    height: 10em;
 }
 
 /* Why hire section me style */
@@ -177,6 +174,8 @@
     justify-content: center;
     padding: 4em;
     gap: 2em;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 }
 
 .why-hire-me .container {
