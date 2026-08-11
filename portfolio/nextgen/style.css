@@ -1,0 +1,8 @@
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.306), rgba(15, 0, 0, 0.578)), url(image/image4.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: rgb(16, 0, 19);
+
+}
