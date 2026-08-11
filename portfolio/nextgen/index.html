@@ -10,27 +10,26 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navigation">
         <!-- svg design of logo integrating the G and an arrow -->
         <div class="logo">
-            <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <!-- The logo will be here -->
-                <text x="50%" y="55%" text-anchor="middle" font-size="30" fill="#FFFFFF" font-family="Arial">G</text>
             </svg>
         </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="properties.html">Properties</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+        <a href="#contact">Contact</a>
     </nav>
     <main class="main">
         <section class="hero">
             <div class="container">
                 <h1>NextGen Real Estate </h1>
-                <a href=""></a>
-                <a href=""></a>
+                <a href="">apply now</a>
+                <a href="">explore</a>
             </div>
         </section>
         <section class="apply">
@@ -52,7 +51,7 @@
 
             </div>
         </section>
-        <section class="signup">
+        <section id="contact" class="contact">
             <form>
                 <label for="Name">Name</label>
                 <input type="text" name="Name" placeholder="Name" id="nameInp">
