@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+
     <title>NextGen Real Estate</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,19 +17,22 @@
 
 <body>
     <nav class="navigation">
-        <!-- svg design of logo integrating the G and an arrow -->
-        <div class="logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- The logo will be here -->
-            </svg>
+        <div class="container">
+
+            <!-- svg design of logo integrating the G and an arrow -->
+
+            <h2>NextGen</h2>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a class="btn" href="#contact">Contact</a>
         </div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#properties">Properties</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact">Contact</a>
     </nav>
+
     <main class="main">
         <section class="hero">
             <div class="container">
@@ -33,6 +42,30 @@
                     <a href="">explore</a>
                 </div>
             </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                </svg>
+
+            </button>
+            <div class="container">
+
+                <form>
+                    <label for="Name">Name</label>
+                    <input type="text" name="Name" placeholder="Name" id="nameInp">
+                    <label for="Email">Email</label>
+                    <input type="email" name="Email" placeholder="Email" id="emailInp">
+                    <label for="Message">Message</label>
+                    <textarea name="Message" id="messageInp"></textarea>
+                    <input type="button" value="send">
+                </form>
+            </div>
+
         </section>
 
         <section class="apply">
@@ -105,11 +138,6 @@
                 <div class="cards"></div>
                 <div class="cards"></div>
                 <div class="cards"></div>
-            </div>
-            <div class="container">
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
                 <div class="cards"></div>
                 <div class="cards"></div>
                 <div class="cards"></div>
@@ -121,21 +149,24 @@
                 <div class="cards"></div>
                 <div class="cards"></div>
                 <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+            </div>
+            <div class="container">
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <form>
-                <label for="Name">Name</label>
-                <input type="text" name="Name" placeholder="Name" id="nameInp">
-                <label for="Email">Email</label>
-                <input type="email" name="Email" placeholder="Email" id="emailInp">
-                <label for="Message">Message</label>
-                <textarea name="Message" id="messageInp"></textarea>
-                <input type="button" value="send">
-            </form>
 
-        </section>
 
     </main>
 

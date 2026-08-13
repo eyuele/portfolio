@@ -11,9 +11,13 @@
     --background: rgb(255, 255, 255);
     --color001: rgba(0, 0, 0, 0.804);
     --color001-t: rgba(0, 0, 0, 0.306);
+    --color002: rgb(0, 0, 0);
+    --color003: rgb(243, 243, 243);
     --fontsize001: clamp(40px, 8vw, 140px);
+    --fontsize002: clamp(12px, 0.8vw, 20px);
 
-    --fontstyle001: ;
+    --fontstyle001: "Gelasio", serif;
+    ;
     --fontstyle002: ;
 }
 
@@ -29,21 +33,38 @@ a {
 .navigation {
     position: sticky;
     top: 0;
-    background: black;
     display: flex;
+    background: var(--color002);
     align-items: center;
+    justify-content: center;
     height: 6rem;
-    justify-content: space-between;
     z-index: 50;
 }
 
-.navigation ul {
+.navigation .container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.navigation .container .btn {
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--background);
+    color: var(--background);
+}
+
+.navigation .container h2 {
+    color: var(--main);
+
+}
+
+.navigation .container ul {
     list-style: none;
     display: flex;
     gap: 4em;
 }
 
-.navigation ul li {
+.navigation .container ul li {
     color: var(--main);
 }
 
@@ -51,7 +72,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(var(--color001-t), var(--color001)), url(image/image6.webp);
+    background: linear-gradient(var(--color001-t), var(--color001)), url(image/image16.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 95vh;
@@ -62,11 +83,13 @@ a {
 .hero .container {
     display: flex;
     flex-direction: column;
+    padding: 1em;
     gap: 1em;
 }
 
 .hero .container h1 {
     font-size: var(--fontsize001);
+    font-family: var(--fontstyle001);
     color: var(--background);
     text-shadow: 0px 0px 8px var(--color001);
 
@@ -231,21 +254,331 @@ a {
 
 
 .gallery {
-    display: flex;
-    height: 80vh;
+    display: grid;
+    grid-template-rows: auto;
+
     align-items: center;
     padding: 1em;
-    background: var(--color001);
+    background: var(--color003);
+    gap: 2em;
 }
+
+.gallery .container {
+    display: flex;
+    max-width: 100%;
+    overflow-y: hidden;
+    gap: 1em;
+}
+
+.gallery .container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery .container:nth-child(1) {
+    grid-row: 1;
+}
+
+.gallery .container:nth-child(2) {
+    grid-row: 2;
+}
+
+.gallery .container:nth-child(3) {
+    grid-row: 3;
+}
+
+.gallery .container .cards {
+    display: flex;
+    flex: 0 0 20em;
+    width: 100%;
+    height: 12em;
+
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(1) {
+    background: url(image/image16.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(2) {
+    background: url(image/image17.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(3) {
+    background: url(image/image15.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(4) {
+    background: url(image/image14.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(5) {
+    background: url(image/image13.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(6) {
+    background: url(image/image12.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(1) {
+    background: url(image/image16.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(2) {
+    background: url(image/image17.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(3) {
+    background: url(image/image15.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(4) {
+    background: url(image/image14.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(5) {
+    background: url(image/image13.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(6) {
+    background: url(image/image12.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(7) {
+    background: url(image/image11.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(8) {
+    background: url(image/image10.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(1) .cards:nth-child(9) {
+    background: url(image/image9.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* second gallery */
+
+.gallery .container:nth-child(2) .cards:nth-child(1) {
+    background: url(image/image16.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(2) {
+    background: url(image/image17.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(3) {
+    background: url(image/image15.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(4) {
+    background: url(image/image14.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(5) {
+    background: url(image/image13.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(6) {
+    background: url(image/image12.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(6) {
+    background: url(image/image12.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(7) {
+    background: url(image/image11.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(8) {
+    background: url(image/image10.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(2) .cards:nth-child(9) {
+    background: url(image/image9.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* third gallery */
+
+.gallery .container:nth-child(3) .cards:nth-child(1) {
+    background: url(image/image16.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(2) {
+    background: url(image/image17.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(3) {
+    background: url(image/image15.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(4) {
+    background: url(image/image14.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(5) {
+    background: url(image/image13.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(6) {
+    background: url(image/image12.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(6) {
+    background: url(image/image12.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(7) {
+    background: url(image/image11.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(8) {
+    background: url(image/image10.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery .container:nth-child(3) .cards:nth-child(9) {
+    background: url(image/image9.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .contact {
     height: 50vh;
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 49;
 }
 
-.contact form {
+.contact button {
+    border: none;
+    border-radius: 4px;
+    background: var(--color002);
+    width: 100%;
+    height: 100%;
+}
+
+.contact button svg {
+
+    color: white;
+}
+
+.contact .container {
+    display: none;
+}
+
+.contact .container form {
     display: flex;
     flex-direction: column;
 }
+
+
+
 
 .footer {
     height: 50vh;
@@ -254,15 +587,18 @@ a {
 }
 
 .footer .container {
-    background: var(--main);
+    background: var(--color002);
     width: 100%;
     height: 100%;
 }
 
 .footer .copyright {
-
+    display: flex;
+    justify-content: center;
     background: var(--main);
+    font-size: var(--fontsize002);
     padding-left: 1em;
+    padding: 0.3rem;
 }
 
 /* THE INFINITE SCROLL KEYFRAME */
@@ -278,13 +614,21 @@ a {
 }
 
 @media (width <=860px) {
-    .navigation ul {
+    .navigation .container ul {
 
         display: none;
     }
 
     .carousel {
         height: 100vh;
+    }
+
+    .contact {
+        right: 1rem;
+
+        width: 3em;
+        height: 3em;
+        z-index: 49;
     }
 
 
