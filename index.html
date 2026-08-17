@@ -14,6 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
+        <!-- Font Awesome for Icons (Place in your <head> if not already added) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Eyuel Esubalew - Front End Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="global.css">
@@ -28,10 +30,10 @@
             <h1>Eyuel Esubalew</h1>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio/index.html">Portfolio</a></li>
-                <li><a href="aboutme/index.html">About-Me</a></li>
+                <li><a href="#hireme">Hire-me</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
-            <a class="btn" href="#contact">Contact-Me</a>
+            <a class="btn" href="portfolio/index.html">Portfolio</a>
         </nav>
     </div>
 
@@ -57,61 +59,26 @@
         <!-- Experience section -->
         <section class="experiance">
             <div class="container">
-                <div class="card">
+                <div class="card revealright">
                     <p>fast turnaround</p>
                 </div>
                 <span></span>
-                <div class="card">
+                <div class="card reveal">
                     <p>clean, modern design</p>
                 </div>
                 <span></span>
-                <div class="card">
+                <div class="card revealleft">
                     <p>10+ projects</p>
                 </div>
 
             </div>
         </section>
 
-        <!-- Why Hire me -->
-        <section class="why-hire-me reveal">
-            <div class="container">
-                <div class="card">
-                    <h2>Why Hire Me for your next <span>project?</span></h2>
-                    <div class="content">
-                        <p>I specialize in building responsive, high-performance websites using HTML, CSS, JavaScript,
-                            and modern front-end
-                            frameworks.</p>
-                    </div>
-                </div>
-
-                <!-- Skills / Benefits Grid -->
-                <div class="benefits-grid">
-                    <div class="benefit-item-container">
-                        <div class="benefit-item">
-                            </a>
-                            <h3>Fast & Light</h3>
-                            <p>Optimized code that loads in a blink.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h3>Pixel-Perfect Design</h3>
-                            <p>Every detail crafted to match your vision.</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>Fully Responsive</h3>
-                        <p>Looks great on any device, from mobile to desktop.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Explore section -->
         <section class="explore" id="explore">
             <div class="container">
-                <div class="card">
-                    <h2>Explore My Work</h2>
-                    <a class="portfolio-btn" id="portfolio-btn" href="portfolio/index.html">View Portfolio</a>
-                </div>
+                <h2>Explore My Work</h2>
+                
                 <div class="display-work">
                     <button></button>
                     <div>
@@ -122,11 +89,73 @@
                     </div>
                     <button></button>
                 </div>
+                <a class="portfolio-btn" id="portfolio-btn" href="portfolio/index.html">View Portfolio</a>
+            </div>
+        </section>
+
+        <!-- Why Hire me -->
+        <section class="why-hire-me">
+            <div class="container">
+                <div class="card reveal">
+                    <h2>Why Hire Me for your next <span>project?</span></h2>
+                    <div class="content reveal">
+                        <p>I specialize in building responsive, high-performance websites using HTML, CSS, JavaScript,
+                            and modern front-end
+                            frameworks.</p>
+                    </div>
+                </div>
+
+                <!-- Skills / Benefits Grid -->
+                <div class="benefits-grid ">
+                    <div class="benefit-item-container">
+                        <div class="benefit-item revealleft">
+                            </a>
+                            <h3>Fast & Light</h3>
+                            <p>Optimized code that loads in a blink.</p>
+                        </div>
+                        <div class="benefit-item revealleft">
+                            <h3>Pixel-Perfect Design</h3>
+                            <p>Every detail crafted to match your vision.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item revealleft">
+                        <h3>Fully Responsive</h3>
+                        <p>Looks great on any device, from mobile to desktop.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container reveal">
+                <h2>About <span>Me</span></h2>
+                
+                <div class="education-badge">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>3rd Year CS Student @ <a href="https://smuc.edu.et/" target="_blank" rel="noopener noreferrer">St. Mary's University</a></span>
+                </div>
+
+                <p>I'm Eyuel Esubalew, a front-end developer and Computer Science student. I combine strong CS fundamentals—like algorithmic thinking and clean architecture—with modern web technologies to craft fast, responsive, and pixel-perfect websites for brands and small businesses.</p>
+                
+                <div class="about-actions">
+                    <a href="https://github.com/eyuele" target="_blank" rel="noopener noreferrer" class="github-btn">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub Profile</span>
+                    </a>
+                    <a href="#hireme" class="about-hire-btn">
+                        <span>Work With Me</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section class="hireme" id="hireme">
             <div class="container">
-                <svg class="upworklogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <svg class="upworklogo revealright" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                     <path  d="M493.9 359.6C443.6 359.6 410.4 320.7 
                                 401.1 305.7C413 210.4 447.9 180.3 493.9 180.3C539.4 
                                 180.3 574.8 216.7 574.8 270C574.8 323.3 539.4 359.7 
@@ -142,11 +171,11 @@
                                 354.9 640.1 270C640.1 185.1 575.3 121.9 494.1 121.9L493.9 121.8z"/>
                 </svg>
 
-                <div>
+                <div class="reveal">
                     <h2>hire me on upwork</h2>
-                    <p>some text</p>
+                    <p>Available for freelance projects. Let's build something great together.</p>
                 </div>
-                <a href="https://www.upwork.com/freelancers/~01f2530bc8da5a8742?mp_source=share" target="_blank" rel="noopener noreferrer" class="btn">Hire me 
+                <a href="https://www.upwork.com/freelancers/~01f2530bc8da5a8742?mp_source=share" target="_blank" rel="noopener noreferrer" class="btn revealleft">Hire me 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                     </svg>
@@ -158,7 +187,7 @@
         <!-- contact section to receive messages -->
         <section class="contact" id="contact">
             <!-- contact form -->
-            <div class="container">
+            <div class="container revealright">
                 <h2>Contact Me</h2>
                 <form>
                     <label for="name">Name</label>
@@ -173,13 +202,42 @@
 
     </main>
     <!--footer of the page goes here-->
+    <!-- Footer Section -->
     <footer>
-        <section class="footer">
+        <div class="footer-main">
             <div class="container">
-                <h1>Eyuel Esubalew</h1>
-                <div class="card"></div>
+                <div class="footer-brand">
+                    <h2>Eyuel Esubalew</h2>
+                    <p>3rd Year CS Student & Front-End Developer crafting functional, performant web experiences.</p>
+                </div>
+
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#explore">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#hireme">Hire Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-socials">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/eyuele" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01f2530bc8da5a8742" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </a>
+                        <a href="mailto:eyuelesubalew@gmail.com" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+
         <section class="copyright">
             <p>&copy; 2026 Eyuel Esubalew. All rights reserved.</p>
         </section>
