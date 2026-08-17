@@ -25,3 +25,19 @@ const observer = new IntersectionObserver((entries) => {
 scrollElement.forEach((element) => observer.observe(element));
 scrollElementLeft.forEach((element) => observer.observe(element));
 scrollElementRight.forEach((element) => observer.observe(element));
+
+
+const scrollBtnRight = document.getElementById("scrollbtnright");
+const scrollBtnLeft = document.getElementById("scrollbtnleft");
+const slider = document.getElementById("scrollHolder");
+
+slider.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  slider.scrollLeft += e.deltaY;
+});
+scrollBtnRight.addEventListener('click', (e) => {
+    slider.scrollLeft += 300;
+})
+scrollBtnLeft.addEventListener('click', (e) => {
+    slider.scrollLeft -= 300;
+})
