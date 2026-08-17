@@ -293,7 +293,9 @@ img {}
 }
 
 .display-work div img {
-    width: 15em;
+    width: 18em;
+    height: 28em;
+    
 }
 
 .explore .container .portfolio-btn {

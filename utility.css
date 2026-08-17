@@ -1,12 +1,13 @@
+
 :root {
-    --color001: #000000;
-    --color001-t: rgba(0, 0, 0, 0.8);
-    --color002: #252525;
-    --color003: #706f6f;
-    --color004: #d7a650;
-    --color005: #fcefe0;
-    --color006: #000000;
-    --color007: #2f2f2f;
+    --color001: #ffffff;
+    --color001-t: rgba(252, 252, 252, 0.8);
+    --color002: #161616;
+    --color003: #7b7b7b;
+    --color004: #dba03b;
+    --color005: #1e1e1e;
+    --color006: rgb(226, 226, 226);
+    --color007: #585858;
     --color008: #ffc560;
     --color009: #6ae166;
     --color010: #78f0b6;
@@ -14,27 +15,31 @@
     --fontStyle001: "Bebas Neue", sans-serif;
     --fontStyle002: "Space Grotesk", sans-serif;
     --font001: clamp(20px, 3.5vh, 24rem);
-    --font002: clamp(36px, 11vw, 140px);
-    --font003: clamp(14px, 1vh, 30px);
-    --font004: clamp(40px, 3vw, 80px);
-    --transitions: 400ms ease;
-}
-
-:root.light {
-    --color001: #ffffff;
-    --color001-t: rgba(252, 252, 252, 0.8);
-    --color002: #161616;
-    --color003: #4a4a4a;
-    --color004: #dba03b;
-    --color005: #1e1e1e;
-    --color006: rgb(226, 226, 226);
-    --color007: #989797;
-    --color008: #ffc560;
-    --fontStyle001: "Bebas Neue", sans-serif;
-    --fontStyle002: "Space Grotesk", sans-serif;
-    --font001: clamp(20px, 3.5vh, 24rem);
     --font002: clamp(48px, 15vw, 140px);
     --font003: clamp(14px, 1vh, 30px);
     --font004: clamp(40px, 3vw, 80px);
     --transitions: 400ms ease;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color001: #000000;
+        --color001-t: rgba(0, 0, 0, 0.8);
+        --color002: #252525;
+        --color003: #706f6f;
+        --color004: #d7a650;
+        --color005: #fcefe0;
+        --color006: #000000;
+        --color007: #2f2f2f;
+        --color008: #ffc560;
+        --color009: #6ae166;
+        --color010: #78f0b6;
+        --color011: #49ff43;
+        --fontStyle001: "Bebas Neue", sans-serif;
+        --fontStyle002: "Space Grotesk", sans-serif;
+        --font001: clamp(20px, 3.5vh, 24rem);
+        --font002: clamp(36px, 11vw, 140px);
+        --font003: clamp(14px, 1vh, 30px);
+        --font004: clamp(40px, 3vw, 80px);
+        --transitions: 400ms ease;
+    }
 }
