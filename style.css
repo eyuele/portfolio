@@ -303,7 +303,7 @@ img {}
 
 /* contact form style */
 .contact {
-    display: flex;
+    display: none;
     justify-content: center;
     padding: 1em;
     background: var(--color004);
@@ -330,6 +330,7 @@ img {}
 
 
 }
+
 
 .contact .container form {
     width: 80%;
@@ -393,6 +394,68 @@ img {}
 
     border: 2px solid var(--color004);
 }
+
+.hireme{
+    display: flex;
+    height: 12em;
+    background: linear-gradient(30deg, var(--color009), var(--color010));
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.hireme .container{
+    display: flex;
+    width: 100%;
+    max-width: 90em;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color001);;
+    
+}
+
+.hireme .container .upworklogo {
+    
+    max-height: 8rem;
+}
+.hireme .container .upworklogo path {
+    fill: var(--color001);
+}
+.hireme .container div {
+    font-family: var(--fontStyle001);
+    font-size: 1.4rem;
+
+}
+.hireme .container .btn{
+    display: flex;
+    width: 20rem;
+    padding: 1rem;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-family: var(--fontStyle001);
+    align-items: center;
+    border:none;
+    border-radius: 4px;
+    color:var(--color001);
+    background: linear-gradient(30deg, var(--color011), var(--color010), var(--color009));
+    background-size: 400% 400%;
+    animation: changeColor 15s linear infinite ;
+}
+
+@keyframes changeColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.hireme .container .btn svg {
+    width: 2rem;
+}
+
 
 .footer {
     height: 50vh;
