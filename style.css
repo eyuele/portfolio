@@ -370,7 +370,7 @@ img {}
     font-family: var(--fontStyle002);
     font-size: 1.15rem;
     color: var(--color003);
-    max-width: 65ch;
+    max-width: 75ch;
     line-height: 1.7;
     margin: 0;
 }
