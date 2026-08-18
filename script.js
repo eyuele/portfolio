@@ -36,8 +36,8 @@ slider.addEventListener('wheel', (e) => {
   slider.scrollLeft += e.deltaY;
 });
 scrollBtnRight.addEventListener('click', (e) => {
-    slider.scrollLeft += 300;
+    slider.scrollLeft -= 300;
 })
 scrollBtnLeft.addEventListener('click', (e) => {
-    slider.scrollLeft -= 300;
+    slider.scrollLeft += 300;
 })

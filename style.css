@@ -215,7 +215,7 @@
 
 }
 
-img {}
+
 
 .why-hire-me .container .benefit-item-container {
     display: flex;
@@ -294,14 +294,12 @@ img {}
 
 .display-work div img {
     width: 18em;
-    height: 28em;
     
 }
 
 .explore .container .portfolio-btn {
     display: inline-block;
     padding: 1rem 5rem;
-
     background: var(--color001);
 }
 /* Updated About Section Styles */

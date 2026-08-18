@@ -7,27 +7,35 @@
 }
 
 :root {
-    --primary: #0a192f;
+    --primary: #101217;
     --secondary: #ff4500;
     --transparent: rgba(5, 4, 9, 0.95);
     --background: #06090d;
     --background2: #000000;
+    --fontcolor001: #a4a3a3;
     --text: #ffffff;
+    --text001: #ffffff;
     --depth: #141414;
-    --tone: #ff6347;
+    --tone: #ed806d;
     --text-tone: #ff6347;
+    --fontStyle001: "Bebas Neue", sans-serif;
+    --fontStyle002: "Space Grotesk", sans-serif;
 }
 
 .darkmode {
-    --primary: #f0f4f8;       
-    --secondary: #ff5722;     
-    --transparent: rgba(255, 255, 255, 0.95);
-    --background: #f8f9fa;    
-    --background2: #ffffff;   
-    --text: #06090d;          
-    --depth: #e9ecef;         
-    --tone: #e64a19;          
-    --text-tone: #e64a19;
+    --primary: #f8f8f8;
+    --secondary: #ff4500;
+    --transparent: rgba(232, 232, 232, 0.95);
+    --background: #bbbbbb;
+    --background2: #ffffff;
+    --fontcolor001: #070707;
+    --text: #030303;
+    --text001: #ffffff;
+    --depth: #fbfbfb;
+    --tone: #ed806d;
+    --text-tone: #ff6347;
+    --fontStyle001: "Bebas Neue", sans-serif;
+    --fontStyle002: "Space Grotesk", sans-serif;
 
 }
 
@@ -43,81 +51,91 @@ body {
     z-index: 1000;
     top: 0;
     width: 100%;
-    padding: 1.25em;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     background-color: var(--transparent);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+    height: 6em;
+
+}
+.nav .container {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 90em;
 }
 
-.nav .logo {
+.nav .container .logo {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-family: var(--fontStyle001);
     color: var(--text);
-
+    letter-spacing: 1.6px;
+    
 }
 
-.nav .logo span {
+.nav .container .logo span {
+    font-size: 2rem;
+    letter-spacing: 1.6px;
+    font-family: var(--fontStyle001);
     color: var(--secondary);
 }
 
-.nav ul {
+.nav .container ul {
     list-style: none;
     display: flex;
     gap: 2em;
 }
 
-.nav ul li a {
+.nav .container ul li a {
     text-decoration: none;
     color: var(--text);
-    font-size: 1em;
+    font-size: 1.3rem;
     transition: 0.3s ease;
 }
 
-.nav ul li a:hover {
+.nav .container ul li a:hover {
     color: var(--secondary);
 }
 
 .hero {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: 1fr auto 1fr;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     background-image: linear-gradient(var(--transparent), rgba(1, 9, 22, 0.9)), url('images/danielle-cerullo-CQfNt66ttZM-unsplash.jpg');
     background-size: cover;
     background-position: center;
+    height: 80vh;
 }
 
-.hero-content {
-    grid-column: 2;
-    /* Puts the content right in the middle column */
-    grid-row: 2;
-    /* Puts the content right in the vertical center row */
-
+.hero .container {
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Aligns items to the left */
     gap: 1.5rem;
-    /* Perfectly spaces out your h1, p, and button */
-    max-width: 650px;
-    /* Keeps text from stretching too wide on big screens */
+    width: 100%;
+    max-width: 90em;
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    /* Responsive typography */
-    line-height: 1.1;
+    font-size: clamp(46px, 24vw, 180px);
+    font-family: var(--fontStyle001);
+    line-height: 0.9;
 }
 
 .hero h1 span {
+    font-family: var(--fontStyle001);
     color: var(--secondary);
 }
 
 .hero p {
-    font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    color: var(--fontcolor001);
 }
 
 .hero .btn {
@@ -144,6 +162,7 @@ body {
     grid-template-columns: 10% 1fr 10%;
     grid-template-rows: auto;
     padding: 6em 0;
+    
 }
 
 .service .container {
@@ -156,9 +175,10 @@ body {
 }
 
 .service .container h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: var(--fontStyle001);
 }
 
 .service .container .card-container {
@@ -175,7 +195,7 @@ body {
     justify-content: flex-end;
     min-height: 21.9em;
     padding: 2.5em 2em;
-    border: 0.1em solid var(--text);
+    border: 0.1em solid var(--primary);
     border-radius: 0.75em;
     background-color: var(--primary);
     text-align: left;
@@ -205,28 +225,31 @@ body {
     background-repeat: no-repeat;
 }
 .service .container .service-description {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text001);
     font-size: 1.1rem;
 }
 .service .container .card-container .card h3 {
+    color: var(--text001);
     padding-bottom: 0.5em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.75rem;
     letter-spacing: 0.5px;
-
+}
+.service .container .card-container .card p{
+    color: var(--text001);
 }
 .testimonials {
-    display: grid;
-    grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: auto;
+    display: flex;
     padding: 6em 0;
-    background: linear-gradient(90deg, #020305, #111b27);
+    background: linear-gradient(90deg, var(--primary), var(--background));
+    
 }
-.testimonials div {
+.testimonials .container {
+    width: 100%;
     grid-column: 2;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 .testimonials h2 {
     font-size: 2.5em;
@@ -234,37 +257,59 @@ body {
     letter-spacing: 1px;
     margin-bottom: 2em;
 }
-.testimonials h2 span {
+.testimonials h2 .highlight {
     color: var(--tone);
 }
 
-.testimonials .container div {
+.testimonials .container .card {
     display: flex;
-    flex-direction: flex-start;
+    align-items: center;
+
+    padding: 1em;
     gap: 1.5em;
-    align-items: left;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.testimonials .container div p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
-    max-width: 600px;
-}
 
-.testimonials .container div .person {
+
+.testimonials .container .card .person {
+    width: 100%;
+    max-width: 30em;
     display: flex;
+    flex-direction: column;
+    padding: 1em;
     margin-bottom: 1em;
+    border-radius: 1em;
+    border: 1px solid var(--tone);
+    gap: 1em;
 }
 
-.testimonials .container div .person img {
-    border: 0.15em solid var(--tone);
-    width: 80px;
-    height: 80px;
+
+.testimonials .container .card .person .personcontainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+
+.testimonials .container .card .person .personcontainer .img {
+    flex: 0 0 4em;
+    border: 1px solid var(--tone);
+    width: 4rem;
+    height: 4rem;
+    background: #000000;
     border-radius: 50%;
     object-fit: cover
 }
 
+.testimonials .container .card .person .comment {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-family: var(--fontStyle002);
+    border-bottom: 1px solid var(--tone);
+}
 .contact {
     display: grid;
     grid-template-columns: 10% 1fr 10%;
@@ -309,6 +354,7 @@ body {
     background: var(--transparent);
     color: var(--text);
     font-size: 1rem;
+    outline: none;
     resize: vertical;
 }
 
@@ -328,31 +374,44 @@ body {
 
 
 .footer {
-    display: grid;
-    grid-template-columns: 16% auto 16%;
-    grid-template-rows: auto;
+    display: flex;
     background-color: var(--background);
+    align-items: center;
+    justify-content: center;
 }
 
 .footer .container {
-    grid-column: 2;
+    width: 100%;
+    max-width: 80rem;
     display: flex;
     flex-direction: column;
 }
 
 .footer .container .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
     padding: 3em;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
 
 }
 
+.footer .container .footer-content .name{
+    color: var(--secondary);
+    font-size: 2rem;
+}
+.footer .container .footer-content .contactus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .footer .container .footer-content .socials {
     margin-top: 1em;
 }
 
 .footer .container .footer-content .socials div {
     display: flex;
+    flex-direction: column;
     letter-spacing: 0.1em;
 
 }
@@ -363,9 +422,12 @@ body {
 
 .footer .container .footer-content .socials div a {
     text-decoration: none;
+    transition: 300ms ease-in-out;
+    color: var(--font);
+}
+.footer .container .footer-content .socials div a:hover {
     color: var(--tone);
 }
-
 .footer .container .footer-bottom {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -406,4 +468,22 @@ body {
 }
 .darkmode .dark-light div:last-child {
     display: block;
+}
+
+@media (width < 760px) {
+    .nav ul li {
+        display: none;
+    }
+    .testimonials .container .card {
+        flex-direction: column;
+        
+    }
+    .testimonials .container .card .person {
+        flex-direction: column;
+    }
+    .footer .container .footer-content{
+        flex-direction: column;
+    }
+    
+    
 }
