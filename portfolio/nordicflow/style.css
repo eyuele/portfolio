@@ -79,7 +79,6 @@ body {
 }
 
 .nav .container {
-    padding: 0.5em;
     grid-column: 2;
     display: flex;
     justify-content: space-between;
