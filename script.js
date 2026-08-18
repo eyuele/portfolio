@@ -68,16 +68,9 @@ if (slider) {
     }, { passive: false });
 
     slider.addEventListener('touchend', (e) => {
-    isSwiping = false;
-    // Calculate velocity (approximate) using the last few move events
-    // For a simpler approach, we'll just snap to the nearest card
-        const cardWidth = slider.querySelector('.card')?.offsetWidth || 300;
-        const currentScroll = slider.scrollLeft;
-        const targetScroll = Math.round(currentScroll / cardWidth) * cardWidth;
-        slider.scrollTo({
-            left: targetScroll,
-            behavior: 'smooth'
-        });
+        isSwiping = false;
+        // Optional: add a small momentum effect (you can implement a simple deceleration)
+        // For now, we just stop
     }, { passive: true });
 
     
