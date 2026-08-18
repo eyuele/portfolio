@@ -9,7 +9,7 @@
 .hero {
     display: flex;
     min-width: 0;
-    height: 100vh;
+    max-height: 56rem;
     color: var(--color005);
     padding: 1em;
     justify-content: center;
@@ -246,11 +246,12 @@
 /* Explore style */
 .explore {
     display: flex;
-    padding: 1em;
     background: var(--color005);
     color: var(--color001);
     align-items: center;
     justify-content: center;
+    padding: 1em;
+
     
     
 }
@@ -259,7 +260,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 90em;
+    max-width: 100em;
     width: 100%;
     max-height: 90vh;
     gap: 1em;
@@ -276,24 +277,54 @@
 }
 
 .display-work button {
-    content: '>';
+
+    flex: 0 0 3rem;
     color: var(--color001);
     background: transparent;
     border: 2px solid var(--color004);
-    width: 4em;
-    height: 4em;
+    
+    height: 2rem;
 
     border-radius: 5em;
 }
 
-.display-work div {
+.display-work #scrollHolder {
     display: flex;
     overflow: hidden;
-    gap: 2em;
+    gap: 1em;
 }
 
-.display-work div img {
-    width: 18em;
+
+.explore .container .display-work #scrollHolder .card{
+    display: flex;
+    flex: 0 0 26rem;
+    flex-direction: column;
+    background: var(--color001);
+    border-radius: 8px;
+    gap: 0.5em;
+}
+.explore .container .display-work #scrollHolder .card a{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    color: var(--color001);
+    font-size: 1.2em;
+    background: var(--color004);
+}
+.explore .container .display-work #scrollHolder .card a .size-6{
+    width: 1em;
+}
+.explore .container .display-work #scrollHolder .card p{
+    padding-left: 1em;
+    color: var(--color005);
+}
+
+.explore .container .display-work #scrollHolder .card img {
+    width: 100%;
     
 }
 
