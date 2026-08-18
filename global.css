@@ -28,6 +28,7 @@ a {
     display: flex;
     position: sticky;
     justify-content: center;
+    align-items: center;
     top: 0;
     min-height: 6em;
     background: var(--color001-t);
@@ -40,7 +41,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
+    max-width: 80rem;
+    padding: 1em;
 }
 
 .navigation nav h1 {
@@ -104,14 +107,6 @@ a {
     background: var(--color005);
     color: var(--color001);
 
-}
-
-@media (width <=780px) {
-
-    .navigation nav ul,
-    .navigation nav .btn {
-        display: none;
-    }
 }
 
 
@@ -299,7 +294,10 @@ footer {
 }
 
 /* Responsive Footer */
-@media (width <= 760px) {
+@media (width < 760px) {
+    .navigation nav ul {
+        display: none;
+    }
     .footer-main .container {
         grid-template-columns: 1fr;
         gap: 2.5rem;
