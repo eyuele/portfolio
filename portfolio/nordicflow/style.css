@@ -68,7 +68,7 @@ body {
 
 .nav {
     display: grid;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 5% auto 5%;
     position: sticky;
     top: 0;
     width: 100%;
@@ -76,9 +76,11 @@ body {
     background: linear-gradient(90deg, var(--depth), var(--transparent-01));
     backdrop-filter: blur(8px);
     z-index: 1000;
+    height: 4em;
 }
 
 .nav .container {
+    
     grid-column: 2;
     display: flex;
     justify-content: space-between;
