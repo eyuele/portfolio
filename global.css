@@ -16,6 +16,7 @@ body {
     height: auto;
     background: var(--color001);
     color: var(--color005);
+    overflow-x: hidden;
 }
 
 a {
@@ -129,7 +130,7 @@ a {
 .revealleft {
     opacity: 0;
     transform: translateX(160px);
-    transition: opacity 600ms ease-out, transform 600ms ease-out;
+    transition: opacity 00ms ease-out, transform 600ms ease-out;
     transition-delay: calc(var(--delay-index, 0) * 150ms);
 }
 .revealleft.visible {
