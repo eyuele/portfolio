@@ -30,20 +30,60 @@ setTimeout(() => {
     });
 }, 200);
 
-
-// ========== SLIDER SCROLL (only if the slider exists) ==========
+// ========== SLIDER SCROLL (with touch swipe support) ==========
 const slider = document.getElementById("scrollHolder");
 
 if (slider) {
-    // Wheel scroll
+    // --- Wheel scroll (desktop) ---
     slider.addEventListener('wheel', (e) => {
         e.preventDefault();
         slider.scrollLeft += e.deltaY;
-    });
+    }, { passive: false });
+
+    // --- Touch swipe (mobile) ---
+    let startX = 0;
+    let startY = 0;
+    let startScrollLeft = 0;
+    let isSwiping = false;
+
+    slider.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        startScrollLeft = slider.scrollLeft;
+        isSwiping = true;
+    }, { passive: true });
+
+    slider.addEventListener('touchmove', (e) => {
+        if (!isSwiping) return;
+        const touch = e.touches[0];
+        const deltaX = touch.clientX - startX;
+        const deltaY = touch.clientY - startY;
+
+        // Only prevent vertical scroll if horizontal swipe is dominant
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            e.preventDefault(); // prevent page scroll
+            slider.scrollLeft = startScrollLeft - deltaX;
+        }
+    }, { passive: false });
+
+    slider.addEventListener('touchend', (e) => {
+    isSwiping = false;
+    // Calculate velocity (approximate) using the last few move events
+    // For a simpler approach, we'll just snap to the nearest card
+        const cardWidth = slider.querySelector('.card')?.offsetWidth || 300;
+        const currentScroll = slider.scrollLeft;
+        const targetScroll = Math.round(currentScroll / cardWidth) * cardWidth;
+        slider.scrollTo({
+            left: targetScroll,
+            behavior: 'smooth'
+        });
+    }, { passive: true });
+
     
     // const scrollBtnRight = document.getElementById("scrollbtnright");
     // const scrollBtnLeft = document.getElementById("scrollbtnleft");
-    
+
     // if (scrollBtnRight && scrollBtnLeft) {
     //     scrollBtnRight.addEventListener('click', () => {
     //         slider.scrollLeft -= 300;
