@@ -324,19 +324,19 @@ body {
 }
 
 .content .service .service-cards .card-img:nth-child(1) {
-    background: linear-gradient(var(--transparent-02), var(--depth)), url('images/compagnons-4CNNH2KEjhc-unsplash.jpg');
+    background: linear-gradient(var(--transparent-02), var(--depth)), url('images/compagnons-4CNNH2KEjhc-unsplash.webp');
     background-size: cover;
     background-position: center;
 }
 
 .content .service .service-cards .card-img:nth-child(2) {
-    background: linear-gradient(var(--transparent-02), var(--depth)), url('images/timur-shakerzianov-wzIjLL4KB-4-unsplash.jpg');
+    background: linear-gradient(var(--transparent-02), var(--depth)), url('images/timur-shakerzianov-wzIjLL4KB-4-unsplash.webp');
     background-size: cover;
     background-position: center;
 }
 
 .content .service .service-cards .card-img:nth-child(3) {
-    background: linear-gradient(var(--transparent-02), var(--depth)), url('images/jacek-dylag-Vve7XkiUq_Y-unsplash.jpg');
+    background: linear-gradient(var(--transparent-02), var(--depth)), url('images/jacek-dylag-Vve7XkiUq_Y-unsplash.webp');
     background-size: cover;
     background-position: center;
 }
